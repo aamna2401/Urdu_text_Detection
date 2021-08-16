@@ -1,0 +1,86 @@
+% This version of CVPR template is provided by Ming-Ming Cheng.
+% Please leave an issue if you found a bug:
+% https://github.com/MCG-NKU/CVPR_Template.
+
+%\documentclass[review]{cvpr}
+\documentclass[final]{cvpr}
+
+\usepackage{times}
+\usepackage{epsfig}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+% Include other packages here, before hyperref.
+
+% If you comment hyperref and then uncomment it, you should delete
+% egpaper.aux before re-running latex.  (Or just hit 'q' on the first latex
+% run, let it finish, and you should be clear).
+\usepackage[pagebackref=true,breaklinks=true,colorlinks,bookmarks=false]{hyperref}
+
+
+\def\cvprPaperID{010} % *** Enter the CVPR Paper ID here
+\def\confYear{CVPR 2021}
+%\setcounter{page}{4321} % For final version only
+
+
+\begin{document}
+
+%%%%%%%%% TITLE
+
+\title{Urdu Text Detection}
+
+\author{Aamna Khan\\
+Information Technology University\\
+Lahore, Pakistan\\
+{\tt\small msds20018@itu.edu.pk}
+% For a paper whose authors are all at the same institution,
+% omit the following lines up until the closing ``}''.
+% Additional authors and addresses can be added with ``\and'',
+% just like the second author.
+% To save space, use either the email address or home page, not both
+
+}
+
+\maketitle
+
+\section{Problem Statement}
+In this paper I have aim to detect Urdu text in an image.Consider picture below:
+
+
+%%%%%%%%% BODY TEXT
+\section{Introduction}
+In the field of computer vision,task of Urdu text detection and recognition is considered one of the most difficult task as Urdu language has some complexities like it has cursive nature,same text is available in different style and there is similarity in the shape of individual characters.Therefore Urdu text is considered hot topic now a days and many researchers are trying to implement urdu datasets(printed or handwritten) on different object detection algorithms.
+
+%-------------------------------------------------------------------------
+
+\section{Related Work}
+Text detection has been most researched topic in the field of computer vision and pattern recognition.
+
+\cite{svm}Before deep learning some conventional (Machine learning) methods were under practice which gave us robust text detection algorithms using textual features of language.Such methods include models like support vector machine and  continuously adaptive mean shift algorithm (CAMSHIFT).These were efficient text detectors but time consuming.
+
+\cite{urdu-mehran}Proposed novel method to detect Urdu text regions from individual video frames.They used sobel and cany edge detection methods merged with MSER and then they classified textual and non-textual regions using support vector machine classifier.Finally to localize text bounding boxes were used.
+
+\cite{fastcnn}worked on custom dataset they created for research.They worked on detection,ligature orientation and recognition of Urdu text.For this purpose they firstly designed custom fasterCNN algorithm and worked in conjuction with four CNN object detectors i.e.,  Resnet50, , Googlenet, Squeezenet, and Resnet18 for the localization and detection of urdu text.Among these Resnet50 with fasterCNN performed best with a average precision of 0.98.
+
+\cite{urducaption}worked on 100 video frames targeting Urdu captions at news and entertainment channels. They performed series of text analysis experiments to get text block in videos.Features extraction was done through Gobar Filter and transform, then fed these features into two classifiers named support vector machine(SVM) and artificial neural network.
+
+\cite{conv}Proposed novel algorithm for multilingual data.Here manually labeled urdu dataset was used.They performed feature fusion of convolutional layers with VGG-16 to localize texts.FastCNN was trained to get proposal of textual and non-textual region and then finally fed this into recurrent neural network.
+
+%-------------------------------------------------------------------------
+
+
+%-------------------------------------------------------------------------
+
+
+
+%------------------------------------------------------------------------
+
+
+
+{\small
+\bibliographystyle{ieee_fullname}
+\bibliography{egbib}
+}
+
+\end{document}
