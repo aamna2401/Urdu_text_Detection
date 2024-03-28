@@ -1,0 +1,282 @@
+%% BioMed_Central_Bib_Style_v1.01
+
+\begin{thebibliography}{17}
+% BibTex style file: bmc-mathphys.bst (version 2.1), 2014-07-24
+\ifx \bisbn   \undefined \def \bisbn  #1{ISBN #1}\fi
+\ifx \binits  \undefined \def \binits#1{#1}\fi
+\ifx \bauthor  \undefined \def \bauthor#1{#1}\fi
+\ifx \batitle  \undefined \def \batitle#1{#1}\fi
+\ifx \bjtitle  \undefined \def \bjtitle#1{#1}\fi
+\ifx \bvolume  \undefined \def \bvolume#1{\textbf{#1}}\fi
+\ifx \byear  \undefined \def \byear#1{#1}\fi
+\ifx \bissue  \undefined \def \bissue#1{#1}\fi
+\ifx \bfpage  \undefined \def \bfpage#1{#1}\fi
+\ifx \blpage  \undefined \def \blpage #1{#1}\fi
+\ifx \burl  \undefined \def \burl#1{\textsf{#1}}\fi
+\ifx \doiurl  \undefined \def \doiurl#1{\url{https://doi.org/#1}}\fi
+\ifx \betal  \undefined \def \betal{\textit{et al.}}\fi
+\ifx \binstitute  \undefined \def \binstitute#1{#1}\fi
+\ifx \binstitutionaled  \undefined \def \binstitutionaled#1{#1}\fi
+\ifx \bctitle  \undefined \def \bctitle#1{#1}\fi
+\ifx \beditor  \undefined \def \beditor#1{#1}\fi
+\ifx \bpublisher  \undefined \def \bpublisher#1{#1}\fi
+\ifx \bbtitle  \undefined \def \bbtitle#1{#1}\fi
+\ifx \bedition  \undefined \def \bedition#1{#1}\fi
+\ifx \bseriesno  \undefined \def \bseriesno#1{#1}\fi
+\ifx \blocation  \undefined \def \blocation#1{#1}\fi
+\ifx \bsertitle  \undefined \def \bsertitle#1{#1}\fi
+\ifx \bsnm \undefined \def \bsnm#1{#1}\fi
+\ifx \bsuffix \undefined \def \bsuffix#1{#1}\fi
+\ifx \bparticle \undefined \def \bparticle#1{#1}\fi
+\ifx \barticle \undefined \def \barticle#1{#1}\fi
+\bibcommenthead
+\ifx \bconfdate \undefined \def \bconfdate #1{#1}\fi
+\ifx \botherref \undefined \def \botherref #1{#1}\fi
+\ifx \url \undefined \def \url#1{\textsf{#1}}\fi
+\ifx \bchapter \undefined \def \bchapter#1{#1}\fi
+\ifx \bbook \undefined \def \bbook#1{#1}\fi
+\ifx \bcomment \undefined \def \bcomment#1{#1}\fi
+\ifx \oauthor \undefined \def \oauthor#1{#1}\fi
+\ifx \citeauthoryear \undefined \def \citeauthoryear#1{#1}\fi
+\ifx \endbibitem  \undefined \def \endbibitem {}\fi
+\ifx \bconflocation  \undefined \def \bconflocation#1{#1}\fi
+\ifx \arxivurl  \undefined \def \arxivurl#1{\textsf{#1}}\fi
+\csname PreBibitemsHook\endcsname
+
+%%% 1
+\bibitem[\protect\citeauthoryear{Jaderberg et~al.}{2014}]{Jaderberg2014}
+\begin{botherref}
+\oauthor{\bsnm{Jaderberg}, \binits{M.}},
+\oauthor{\bsnm{Simonyan}, \binits{K.}},
+\oauthor{\bsnm{Zisserman}, \binits{A.}}:
+Spatial transformer networks.
+arXiv preprint arXiv:1506.02025
+(2014)
+\end{botherref}
+\endbibitem
+
+%%% 2
+\bibitem[\protect\citeauthoryear{Gupta et~al.}{2023}]{Gupta2023}
+\begin{botherref}
+\oauthor{\bsnm{Gupta}, \binits{A.}},
+\oauthor{\bsnm{Ahmed}, \binits{S.}},
+\oauthor{\bsnm{Khan}, \binits{S.H.}},
+\oauthor{\bsnm{Siddiqi}, \binits{I.}}:
+A novel approach for text detection in natural images with complex backgrounds.
+arXiv preprint arXiv:2301.04350
+(2023)
+\end{botherref}
+\endbibitem
+
+%%% 3
+\bibitem[\protect\citeauthoryear{Gomez and Karatzas}{2009}]{Gomez2009}
+\begin{barticle}
+\bauthor{\bsnm{Gomez}, \binits{L.}},
+\bauthor{\bsnm{Karatzas}, \binits{D.}}:
+\batitle{Text detection in natural images: A survey}.
+\bjtitle{Pattern Recognition}
+\bvolume{42}(\bissue{2}),
+\bfpage{295}--\blpage{310}
+(\byear{2009})
+\end{barticle}
+\endbibitem
+
+%%% 4
+\bibitem[\protect\citeauthoryear{Sun et~al.}{2018}]{Sun2018}
+\begin{barticle}
+\bauthor{\bsnm{Sun}, \binits{Z.}},
+\bauthor{\bsnm{Xu}, \binits{B.}},
+\bauthor{\bsnm{Huang}, \binits{H.}},
+\bauthor{\bsnm{Luo}, \binits{J.}},
+\bauthor{\bsnm{Xu}, \binits{W.}},
+\bauthor{\bsnm{Wang}, \binits{S.}},
+\bauthor{\bsnm{Yang}, \binits{Y.}}:
+\batitle{Deep text detection with end-to-end phoneme-level attention}.
+\bjtitle{IEEE Transactions on Image Processing}
+\bvolume{27}(\bissue{8}),
+\bfpage{4036}--\blpage{4048}
+(\byear{2018})
+\end{barticle}
+\endbibitem
+
+%%% 5
+\bibitem[\protect\citeauthoryear{Khan et~al.}{2022}]{Khan2022}
+\begin{botherref}
+\oauthor{\bsnm{Khan}, \binits{S.H.}},
+\oauthor{\bsnm{Khan}, \binits{A.}},
+\oauthor{\bsnm{Siddiqi}, \binits{I.}}:
+Improving urdu text detection with attention-based bidirectional lstms.
+arXiv preprint arXiv:2208.03395
+(2022)
+\end{botherref}
+\endbibitem
+
+%%% 6
+\bibitem[\protect\citeauthoryear{Khan}{2019}]{Khan2019}
+\begin{barticle}
+\bauthor{\bsnm{Khan}, \binits{M.U.}}:
+\batitle{A survey on urdu text recognition}.
+\bjtitle{International Journal of Imaging Systems and Technology}
+\bvolume{29}(\bissue{1}),
+\bfpage{5}--\blpage{18}
+(\byear{2019})
+\end{barticle}
+\endbibitem
+
+%%% 7
+\bibitem[\protect\citeauthoryear{Shi et~al.}{2016}]{Shi2016}
+\begin{botherref}
+\oauthor{\bsnm{Shi}, \binits{B.}},
+\oauthor{\bsnm{Wang}, \binits{X.}},
+\oauthor{\bsnm{Xiao}, \binits{P.}},
+\oauthor{\bsnm{Zhang}, \binits{L.}}:
+Automatic text detection in natural images with multi-channel features.
+arXiv preprint arXiv:1603.03329
+(2016)
+\end{botherref}
+\endbibitem
+
+%%% 8
+\bibitem[\protect\citeauthoryear{Wang et~al.}{2019}]{Wang2019}
+\begin{botherref}
+\oauthor{\bsnm{Wang}, \binits{C.}},
+\oauthor{\bsnm{Jin}, \binits{X.}},
+\oauthor{\bsnm{Li}, \binits{Q.}},
+\oauthor{\bsnm{Wei}, \binits{Y.}},
+\oauthor{\bsnm{Zhang}, \binits{W.}},
+\oauthor{\bsnm{Zhu}, \binits{Y.}}:
+Learning to refine the boundary of text instance.
+arXiv preprint arXiv:1902.06683
+(2019)
+\end{botherref}
+\endbibitem
+
+%%% 9
+\bibitem[\protect\citeauthoryear{Chowdhury et~al.}{2019}]{urcutext}
+\begin{barticle}
+\bauthor{\bsnm{Chowdhury}, \binits{S.A.}},
+\bauthor{\bsnm{Khan}, \binits{S.}},
+\bauthor{\bsnm{Javed}, \binits{K.}},
+\bauthor{\bsnm{Shafait}, \binits{F.}},
+\bauthor{\bsnm{Shahbaz~Khan}, \binits{A.}},
+\bauthor{\bsnm{Siddiqui}, \binits{I.}},
+\bauthor{\bsnm{Dengel}, \binits{A.}}:
+\batitle{Urdu-text: A dataset and benchmark for urdu text detection and
+  recognition in natural scenes}.
+\bjtitle{IEEE Transactions on Image Processing}
+\bvolume{28}(\bissue{11}),
+\bfpage{5638}--\blpage{5650}
+(\byear{2019})
+\end{barticle}
+\endbibitem
+
+%%% 10
+\bibitem[\protect\citeauthoryear{He et~al.}{2015}]{resnet}
+\begin{botherref}
+\oauthor{\bsnm{He}, \binits{K.}},
+\oauthor{\bsnm{Zhang}, \binits{X.}},
+\oauthor{\bsnm{Ren}, \binits{S.}},
+\oauthor{\bsnm{Sun}, \binits{J.}}:
+Deep Residual Learning for Image Recognition
+(2015)
+\end{botherref}
+\endbibitem
+
+%%% 11
+\bibitem[\protect\citeauthoryear{Lin et~al.}{2017}]{fpn}
+\begin{botherref}
+\oauthor{\bsnm{Lin}, \binits{T.-Y.}},
+\oauthor{\bsnm{Dollár}, \binits{P.}},
+\oauthor{\bsnm{Girshick}, \binits{R.}},
+\oauthor{\bsnm{He}, \binits{K.}},
+\oauthor{\bsnm{Hariharan}, \binits{B.}},
+\oauthor{\bsnm{Belongie}, \binits{S.}}:
+Feature Pyramid Networks for Object Detection
+(2017)
+\end{botherref}
+\endbibitem
+
+%%% 12
+\bibitem[\protect\citeauthoryear{Long et~al.}{2020}]{long2020textsnake}
+\begin{botherref}
+\oauthor{\bsnm{Long}, \binits{S.}},
+\oauthor{\bsnm{Ruan}, \binits{J.}},
+\oauthor{\bsnm{Zhang}, \binits{W.}},
+\oauthor{\bsnm{He}, \binits{X.}},
+\oauthor{\bsnm{Wu}, \binits{W.}},
+\oauthor{\bsnm{Yao}, \binits{C.}}:
+TextSnake: A Flexible Representation for Detecting Text of Arbitrary Shapes
+(2020)
+\end{botherref}
+\endbibitem
+
+%%% 13
+\bibitem[\protect\citeauthoryear{Zhang et~al.}{2020}]{zhang2020deep}
+\begin{botherref}
+\oauthor{\bsnm{Zhang}, \binits{S.-X.}},
+\oauthor{\bsnm{Zhu}, \binits{X.}},
+\oauthor{\bsnm{Hou}, \binits{J.-B.}},
+\oauthor{\bsnm{Liu}, \binits{C.}},
+\oauthor{\bsnm{Yang}, \binits{C.}},
+\oauthor{\bsnm{Wang}, \binits{H.}},
+\oauthor{\bsnm{Yin}, \binits{X.-C.}}:
+Deep Relational Reasoning Graph Network for Arbitrary Shape Text Detection
+(2020)
+\end{botherref}
+\endbibitem
+
+%%% 14
+\bibitem[\protect\citeauthoryear{Zhou et~al.}{2017}]{zhou2017east}
+\begin{botherref}
+\oauthor{\bsnm{Zhou}, \binits{X.}},
+\oauthor{\bsnm{Yao}, \binits{C.}},
+\oauthor{\bsnm{Wen}, \binits{H.}},
+\oauthor{\bsnm{Wang}, \binits{Y.}},
+\oauthor{\bsnm{Zhou}, \binits{S.}},
+\oauthor{\bsnm{He}, \binits{W.}},
+\oauthor{\bsnm{Liang}, \binits{J.}}:
+EAST: An Efficient and Accurate Scene Text Detector
+(2017)
+\end{botherref}
+\endbibitem
+
+%%% 15
+\bibitem[\protect\citeauthoryear{Acuna et~al.}{2018}]{acuna2018efficient}
+\begin{botherref}
+\oauthor{\bsnm{Acuna}, \binits{D.}},
+\oauthor{\bsnm{Ling}, \binits{H.}},
+\oauthor{\bsnm{Kar}, \binits{A.}},
+\oauthor{\bsnm{Fidler}, \binits{S.}}:
+Efficient Interactive Annotation of Segmentation Datasets with Polygon-RNN++
+(2018)
+\end{botherref}
+\endbibitem
+
+%%% 16
+\bibitem[\protect\citeauthoryear{Ling et~al.}{2019}]{ling2019fast}
+\begin{botherref}
+\oauthor{\bsnm{Ling}, \binits{H.}},
+\oauthor{\bsnm{Gao}, \binits{J.}},
+\oauthor{\bsnm{Kar}, \binits{A.}},
+\oauthor{\bsnm{Chen}, \binits{W.}},
+\oauthor{\bsnm{Fidler}, \binits{S.}}:
+Fast Interactive Object Annotation with Curve-GCN
+(2019)
+\end{botherref}
+\endbibitem
+
+%%% 17
+\bibitem[\protect\citeauthoryear{Peng et~al.}{2020}]{peng2020deep}
+\begin{botherref}
+\oauthor{\bsnm{Peng}, \binits{S.}},
+\oauthor{\bsnm{Jiang}, \binits{W.}},
+\oauthor{\bsnm{Pi}, \binits{H.}},
+\oauthor{\bsnm{Li}, \binits{X.}},
+\oauthor{\bsnm{Bao}, \binits{H.}},
+\oauthor{\bsnm{Zhou}, \binits{X.}}:
+Deep Snake for Real-Time Instance Segmentation
+(2020)
+\end{botherref}
+\endbibitem
+
+\end{thebibliography}

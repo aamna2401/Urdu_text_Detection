@@ -1,0 +1,75 @@
+This is BibTeX, Version 0.99d
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: sn-article.aux
+Reallocating 'name_of_file' (item size: 1) to 12 items.
+The style file: sn-mathphys.bst
+Reallocating 'name_of_file' (item size: 1) to 16 items.
+Reallocating 'glb_str_end' (item size: 4) to 20 items.
+Reallocating 'glb_str_ptr' (item size: 4) to 20 items.
+Reallocating 'global_strs' (item size: 1) to 4000000 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Reallocating 'wiz_functions' (item size: 4) to 6000 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Database file #1: sn-bibliography.bib
+"{" immediately follows a field name---line 694 of file sn-bibliography.bib
+ : @INPROCEEDINGS
+ :               {SanNet,
+I'm skipping whatever remains of this entry
+Reallocating 'wiz_functions' (item size: 4) to 9000 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+You've used 8 entries,
+            7480 wiz_defined-function locations,
+            1219 strings with 10878 characters,
+and the built_in function-call counts, 27762 in all, are:
+= -- 3395
+> -- 236
+< -- 8
++ -- 506
+- -- 90
+* -- 2160
+:= -- 5895
+add.period$ -- 0
+call.type$ -- 8
+change.case$ -- 32
+chr.to.int$ -- 8
+cite$ -- 8
+duplicate$ -- 276
+empty$ -- 1965
+format.name$ -- 302
+if$ -- 5879
+int.to.chr$ -- 1
+int.to.str$ -- 9
+missing$ -- 0
+newline$ -- 155
+num.names$ -- 40
+pop$ -- 276
+preamble$ -- 1
+purify$ -- 32
+quote$ -- 0
+skip$ -- 1608
+stack$ -- 0
+substring$ -- 4070
+swap$ -- 98
+text.length$ -- 64
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 216
+warning$ -- 0
+while$ -- 223
+width$ -- 0
+write$ -- 201
+(There was 1 error message)

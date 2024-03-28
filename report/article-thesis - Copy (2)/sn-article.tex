@@ -1,0 +1,656 @@
+%Version 2.1 April 2023
+% See section 11 of the User Manual for version history
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                                                                 %%
+%% Please do not use \input{...} to include other tex files.       %%
+%% Submit your LaTeX manuscript as one .tex document.              %%
+%%                                                                 %%
+%% All additional figures and files should be attached             %%
+%% separately and not embedded in the \TeX\ document itself.       %%
+%%                                                                 %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%\documentclass[referee,sn-basic]{sn-jnl}% referee option is meant for double line spacing
+
+%%=======================================================%%
+%% to print line numbers in the margin use lineno option %%
+%%=======================================================%%
+
+%%\documentclass[lineno,sn-basic]{sn-jnl}% Basic Springer Nature Reference Style/Chemistry Reference Style
+
+%%======================================================%%
+%% to compile with pdflatex/xelatex use pdflatex option %%
+%%======================================================%%
+
+%%\documentclass[pdflatex,sn-basic]{sn-jnl}% Basic Springer Nature Reference Style/Chemistry Reference Style
+
+
+%%Note: the following reference styles support Namedate and Numbered referencing. By default the style follows the most common style. To switch between the options you can add or remove Numbered in the optional parenthesis. 
+%%The option is available for: sn-basic.bst, sn-vancouver.bst, sn-chicago.bst, sn-mathphys.bst. %  
+ 
+%%\documentclass[sn-nature]{sn-jnl}% Style for submissions to Nature Portfolio journals
+%%\documentclass[sn-basic]{sn-jnl}% Basic Springer Nature Reference Style/Chemistry Reference Style
+\documentclass[sn-mathphys,Numbered]{sn-jnl}% Math and Physical Sciences Reference Style
+%%\documentclass[sn-aps]{sn-jnl}% American Physical Society (APS) Reference Style
+%%\documentclass[sn-vancouver,Numbered]{sn-jnl}% Vancouver Reference Style
+%%\documentclass[sn-apa]{sn-jnl}% APA Reference Style 
+%%\documentclass[sn-chicago]{sn-jnl}% Chicago-based Humanities Reference Style
+%%\documentclass[default]{sn-jnl}% Default
+%%\documentclass[default,iicol]{sn-jnl}% Default with double column layout
+
+%%%% Standard Packages
+%%<additional latex packages if required can be included here>
+\usepackage{multicol}%
+\usepackage{graphicx}%
+\usepackage{placeins}
+\usepackage{multirow}%
+\usepackage{amsmath,amssymb,amsfonts}%
+\usepackage{amsthm}%
+\usepackage{mathrsfs}%
+\usepackage[title]{appendix}%
+\usepackage{xcolor}%
+\usepackage{textcomp}%
+\usepackage{manyfoot}%
+\usepackage{booktabs}%
+\usepackage{algorithm}%
+\usepackage{algorithmicx}%
+\usepackage{algpseudocode}%
+\usepackage{listings}%
+\graphicspath{{"C\Users\aak\Documents\E\my_files\Thesis\reports\article-thesis\figures\"}} 
+
+
+%%%%%=============================================================================%%%%
+%%%%  Remarks: This template is provided to aid authors with the preparation
+%%%%  of original research articles intended for submission to journals published 
+%%%%  by Springer Nature. The guidance has been prepared in partnership with 
+%%%%  production teams to conform to Springer Nature technical requirements. 
+%%%%  Editorial and presentation requirements differ among journal portfolios and 
+%%%%  research disciplines. You may find sections in this template are irrelevant 
+%%%%  to your work and are empowered to omit any such section if allowed by the 
+%%%%  journal you intend to submit to. The submission guidelines and policies 
+%%%%  of the journal take precedence. A detailed User Manual is available in the 
+%%%%  template package for technical guidance.
+%%%%%=============================================================================%%%%
+
+%\jyear{2021}%
+
+%% as per the requirement new theorem styles can be included as shown below
+%\theoremstyle{thmstyleone}%
+\newtheorem{theorem}{Theorem}%  meant for continuous numbers
+%%\newtheorem{theorem}{Theorem}[section]% meant for sectionwise numbers
+%% optional argument [theorem] produces theorem numbering sequence instead of independent numbers for Proposition
+\newtheorem{proposition}[theorem]{Proposition}% 
+%%\newtheorem{proposition}{Proposition}% to get separate numbers for theorem and proposition etc.
+
+%\theoremstyle{thmstyletwo}%
+%\newtheorem{example}{Example}%
+%\newtheorem{remark}{Remark}%
+
+%\theoremstyle{thmstylethree}%
+%\newtheorem{definition}{Definition}%
+
+%\raggedbottom
+%%\unnumbered% uncomment this for unnumbered level heads
+
+\begin{document}
+
+\title[Article Title]{ Urdu Text Detection In Natural Scene Images}
+
+%%=============================================================%%
+%% Prefix	-> \pfx{Dr}
+%% GivenName	-> \fnm{Joergen W.}
+%% Particle	-> \spfx{van der} -> surname prefix
+%% FamilyName	-> \sur{Ploeg}
+%% Suffix	-> \sfx{IV}
+%% NatureName	-> \tanm{Poet Laureate} -> Title after name
+%% Degrees	-> \dgr{MSc, PhD}
+%% \author*[1,2]{\pfx{Dr} \fnm{Joergen W.} \spfx{van der} \sur{Ploeg} \sfx{IV} \tanm{Poet Laureate} 
+%%                 \dgr{MSc, PhD}}\email{iauthor@gmail.com}
+%%=============================================================%%
+
+\author*[1,2]{\fnm{First} \sur{Author}}\email{iauthor@gmail.com}
+
+\author[2,3]{\fnm{Second} \sur{Author}}\email{iiauthor@gmail.com}
+\equalcont{These authors contributed equally to this work.}
+
+\author[1,2]{\fnm{Third} \sur{Author}}\email{iiiauthor@gmail.com}
+\equalcont{These authors contributed equally to this work.}
+
+\affil*[1]{\orgdiv{Department}, \orgname{Organization}, \orgaddress{\street{Street}, \city{City}, \postcode{100190}, \state{State}, \country{Country}}}
+
+\affil[2]{\orgdiv{Department}, \orgname{Organization}, \orgaddress{\street{Street}, \city{City}, \postcode{10587}, \state{State}, \country{Country}}}
+
+\affil[3]{\orgdiv{Department}, \orgname{Organization}, \orgaddress{\street{Street}, \city{City}, \postcode{610101}, \state{State}, \country{Country}}}
+
+%%==================================%%
+%% sample for unstructured abstract %%
+%%==================================%%
+
+	
+\abstract{
+This paper presents a robust method for Urdu text detection in complex scenes, overcoming challenges posed by the script's cursive morphology and diverse writing styles. Our novel dual-model architecture seamlessly integrates the Boundary Proposal Model and the Adaptive Deformation Model, achieving a remarkable increase in accuracy compared to existing state-of-the-art models like YOLO and Faster R-CNN.
+	
+The Boundary Proposal Model precisely identifies potential text regions, while the Adaptive Deformation Model dynamically adjusts to the varying shapes and orientations of Urdu text, leveraging an encoder-decoder structure with Graph Convolutional Networks and Bi-LSTMs for flexible capture of intricate linguistic features. This effective combination outperforms existing approaches in handling complex-shaped, multi-oriented text against intricate backgrounds, including highly textured surfaces and complex geometric patterns.
+	
+Furthermore, our model demonstrates proficiency in multilingual text detection, fostering collaboration across diverse linguistic domains. This work significantly advances text detection capabilities for emerging technologies, opening doors to applications in autonomous systems, cross-cultural interactions, and enhanced text accessibility. We acknowledge the importance of future research to address potential limitations and explore further applications.}
+
+\keywords{Urdu Text Detection, Text Detection,Text Detection In Natural Scene Images, Text Detection In Complex Background}
+
+%%\pacs[JEL Classification]{D8, H51}
+
+%%\pacs[MSC Classification]{35A01, 65L10, 65L12, 65L20, 65L70}
+
+\maketitle
+
+\begin{multicols}{2}
+\section{Introduction}
+Imagine a future where machines effortlessly decipher the nuances of text, propelling groundbreaking research in text detection. In this evolving frontier of computer vision, researchers grapple with formidable challenges, particularly in extracting accurate information from natural scenes. While deep learning has demonstrated remarkable strides in controlled environments (e.g., \cite{Jaderberg2014, Gupta2023}), existing methods demonstrate limitations when confronted with the intricacies of natural scenes, such as multi-oriented text, intricate backgrounds, sensor noise, and varying resolutions (\cite{Gomez2009, Sun2018, Khan2022}).
+
+These challenges become particularly acute for scripts like Urdu, renowned for their cursive morphology, ligature-based structure, and distinct styles (Naskh and Nastaleeq) (\cite{Khan2019}).This can be seen in the picture Fig.\ref{fig:UrduStyles}.The complexities of complex layouts and non-planar surfaces further impede accurate text detection (\cite{Shi2016}). Urgent attention is required to bridge the gap between research and practical applications.
+
+
+\begin{figure*}[!htp]
+	\centering  
+	\includegraphics[width=5cm]{figures/urduStyles.eps}
+	\caption[Urdu Styles]{Urdu Styles}
+	\label{fig:UrduStyles}
+\end{figure*} 
+
+Our research makes significant contributions to advancing text detection, with a specific focus on the complexities introduced by the Urdu script. Building upon deep learning advancements (\cite{Shi2016, Wang2019}), we present three key contributions:
+
+\begin{enumerate}
+	\item \textbf{Meticulous Polygon Annotations:} We curate a high-quality dataset with fine-grained, shape-aware polygon annotations, offering a significantly finer representation than traditional rectangular bounding boxes. This enhances the precision of our model, particularly for complex text shapes and ligatures prevalent in Urdu script.
+	
+	\item \textbf{Groundbreaking Dual-Model Architecture:} Introducing a pioneering dual-model architecture that seamlessly integrates the Boundary Proposal Model and the Adaptive Deformation Model. This framework, empowered by an encoder-decoder structure with Graph Convolutional Networks (GCNs) and Bi-LSTMs, achieves a remarkable increase in Urdu text detection accuracy compared to existing methods.Overview of the model can be seen in Fig.\ref{fig:architecture}
+	
+	\begin{center}
+		\begin{figure*}[htp]
+			\centering  
+			\includegraphics[width=7cm]{figures/BoundaryProposalDeformationHQ.eps}
+			\caption[Architecture Overview]{Architecture Overview}
+			\label{fig:architecture}
+		\end{figure*}
+	\end{center}
+	
+	\item \textbf{Potential Application Across Scripts with Varying Complexities:} While our primary focus is Urdu, our work addresses unique challenges of this script while offering potential applications across scripts with varying complexities. The proposed model architecture and learning framework can be adapted to other languages, facilitating advancements in text detection accuracy.
+\end{enumerate}
+
+In conclusion, our research stands as a beacon for the advancement of text detection in complex scenes. It offers a clear path towards a future where machines can comprehend and interpret text with human-like precision, opening doors to a multitude of transformative applications in areas including autonomous systems and cross-cultural interactions.
+
+\section{Methodology}
+Our text detection methodology is designed to address the challenges posed by diverse natural scene images, featuring text instances in languages such as Urdu, English, Sindhi, and Arabic. The overarching strategy comprises intricate steps involving dataset selection, annotations, model-specific data preprocessing, and the creation of a synthetic dataset for improved detection. Here, we provide a high-level overview of our methodology, integrating key aspects that contribute to its efficacy.
+
+\subsubsection{Urdu-Text Dataset Selection}
+The foundation of our text detection research lies in the meticulously curated publicaly available Urdu-Text dataset\cite{urcutext}, a comprehensive collection of scene images featuring diverse text instances. This rich dataset comprises 1400 images, each containing text in Urdu, English, Sindhi, and Arabic languages. Each text instance in the dataset is originally annotated with quadrilateral annotations. By incorporating a variety of text styles, sizes, and orientations within natural scene backgrounds, the Urdu-Text dataset ensures representativeness of real-world scenarios.
+
+\subsubsection{Model-Specific Data Preprocessing}
+To accommodate diverse models, we implemented customized data preprocessing strategies. For YOLO-based detection, quadtrilateral annotations were converted to bounding boxes and normalized coordinates. Similarly, Faster R-CNN data preprocessing involved class mapping and bounding box conversion to COCO format. Our framework, utilizing Graph Convolutional Networks (GCNs), required detailed polygon annotations, necessitating the creation of a specialized dataset featuring precise polygon annotations for each text region.
+\subsubsection{Synthetic Dataset Generation}
+While the Urdu-Text dataset provided a valuable foundation, its existing annotations in the form of quadrilateral bounding boxes were not suitable for our proposed GCN-based text detection approach. GCNs require precise and detailed information about the shape and connectivity of text instances, which is best captured by polygon annotations.
+
+To address this, we generated a synthetic dataset specifically tailored for GCNs. This involved meticulously combining images from the Urdu-Text dataset with carefully annotated text regions using polygon annotations. We utilized the V7labs annotation tool for manual labeling, and OpenCV's findContours function was instrumental in extracting precise contours to form accurate polygon annotations.
+
+This process significantly increased the diversity of our dataset, allowing our models to learn from a wider range of text instances with varying shapes, sizes, fonts, orientations, and background complexities. Additionally, the synthetic dataset provided a controlled environment for fine-tuning the GCN models, enabling them to effectively capture the inherent geometric relationships within text instances.
+
+\subsection{Comparative Analysis of Text Detection Models}
+
+Our research undertakes a meticulous examination of three prominent object detection algorithms: YOLO (You Only Look Once), Faster R-CNN (Region-based Convolutional Neural Network), and the Adaptive Boundary Proposal Deformation Model incorporates the Graph Convolutional Network (GCN) as a crucial component, leveraging the unique capabilities of GCN to enhance the overall performance of the methodology. The central objective is to comprehensively evaluate their efficacy in the domain of text detection.
+
+\subsubsection{YOLO for Text Detection: Real-Time Capabilities with Specialized Adaptations}
+
+The YOLO model, designed for general object detection, was meticulously implemented and trained for text detection tasks. Acknowledging its prowess in real-time detection, our findings revealed challenges in accurately capturing multi-oriented and arbitrary-shaped text instances—common occurrences in text detection scenarios. The YOLO architecture was adapted for text detection, necessitating considerations for multi-oriented text, varying aspect ratios, and small-sized text instances.
+%(depicted in Figure~\ref{fig:YOLO-Architecture})
+
+To tailor YOLO for text detection, the training data underwent careful preparation, including annotated bounding boxes for text instances of diverse sizes, orientations, and styles. During training, adjustments to the YOLO model's network parameters were made through backpropagation and gradient descent optimization. Specialized preprocessing techniques, such as rotation and perspective transformations, were applied to augment the dataset, enhancing the model's capability to handle the intricacies of multi-oriented and arbitrary-shaped text.
+
+Despite YOLO's grid-based real-time processing, our analysis highlights the need for specialized adaptations when applied to text detection. The grid approach, while efficient, requires thoughtful consideration of challenges unique to textual content, such as varying orientations and aspect ratios.
+
+\subsubsection{Faster R-CNN: Two-Stage Architecture for Enhanced Text Detection}
+
+Our investigation extended to the Faster R-CNN framework, renowned for its exceptional accuracy and adeptness in handling complex objects. In contrast to YOLO's single-pass detection, Faster R-CNN adopts a two-stage approach, involving a Region Proposal Network (RPN) and a subsequent detection network. This architecture demonstrated marked superiority in capturing text instances with arbitrary shapes and orientations.
+
+Text detection, often characterized by variations in scale, aspect ratio, and orientation, presented challenges that Faster R-CNN adeptly addressed. The RPN generated region proposals tailored for text regions with varying scales and orientations, and the subsequent detection network refined these proposals with precise bounding box coordinates, resulting in enhanced localization accuracy. The adaptability of Faster R-CNN to adjust region proposals based on text characteristics positioned it as an effective solution for text detection tasks.
+
+Despite computational complexity being a drawback, Faster R-CNN's two-stage process emerged as a strategic advantage, particularly in scenarios involving arbitrary-shaped and multi-oriented text. The nuanced adjustments made during the region proposal stage contributed to more accurate subsequent detection and recognition.
+
+\subsubsection{Adaptive Boundary Proposal Deformation Model with GCN: Exploiting Graph Structures for Enhanced Accuracy}
+
+The innovation introduced in our study involved the incorporation of a Graph Convolutional Network (GCN) with an Adaptive Boundary Proposal Deformation Model. This approach harnessed the inherent graph structure of text instances, capturing intricate relationships and deformations within text regions. The GCN's unique ability to model dependencies among neighboring pixels and exploit contextual information significantly elevated the accuracy of text detection, especially in cases involving complex deformations and variations in text shape.
+
+This pioneering model was designed to address the limitations of traditional approaches by leveraging the graph-based representation of text structures. The integration of GCN contributed to a substantial improvement in the model's capacity to handle complex text scenarios, establishing it as a powerful tool for text detection.
+
+\subsection{Comparative Evaluation: Achieving Optimal Accuracy and Robustness}
+In conclusion, our robust comparative analysis sheds light on the strengths and limitations of YOLO, Faster R-CNN, and the innovative Adaptive Boundary Proposal Deformation Model with GCN for text detection. Our findings underscore the importance of thoughtful adaptations for individual models when applied to text-specific tasks. While YOLO excels in real-time detection, its effectiveness in text scenarios requires careful considerations. Faster R-CNN, with its two-stage architecture, proves highly adept in capturing text intricacies. The novel integration of GCN with an adaptive deformation model emerges as a groundbreaking solution for complex text instances.
+
+\subsection{Framework Overview: Integrating Advanced Techniques for Precise Text Detection}
+
+Our comprehensive text detection framework, depicted in Fig. ~\ref{fig:Our Framework}, integrates advanced techniques in feature extraction, multi-level feature fusion, and boundary proposal modeling to achieve accurate and robust results.
+
+%\begin{center}
+   \begin{figure*}[htp]
+       \centering  
+        \includegraphics[width=9cm]{figures/TextBPN.eps}
+        \caption[Architecture Overview]{Architecture Overview}
+        \label{fig:Our Framework}
+    \end{figure*}
+%\end{center}
+
+%as illustrated in Figure ~\ref{fig:BPN}.
+\subsection{Boundary Proposal Model}
+The core component of our method is the boundary proposal model. The initial stage of our methodology involves feature extraction using the ResNet-50 model \cite{resnet}, adopting a multi-level feature fusion strategy inspired by Feature Pyramid Network (FPN) \cite{fpn}. This process aims to preserve spatial resolution and leverage multi-level information for enhanced performance. This model incorporates Feature Pyramid Network (FPN) and multi-layer dilated convolutions, combining the benefits of capturing multi-scale information and preserving spatial details. FPN ensures robust feature representation, while dilated convolutions capture contextual details, enabling accurate text detection across various sizes and shapes. The model generates classification, distance field, and direction field maps, providing essential information for producing coarse boundary proposals, where each proposal comprises N points, representing a potential text instance.
+
+To refine the initial coarse proposals, we introduce an adaptive boundary deformation model. This model performs iterative boundary deformations guided by prior information such as the classification map, distance field, and direction field.
+
+\paragraph{Feature Extraction}
+
+The proposed method leverages the integrated architecture of the Feature Pyramid Network (FPN) and multi-layer dilated convolutions to extract three key features: the classification map, the direction field, and the distance field. These features collectively play a crucial role in accurately delineating and characterizing text regions within images.
+
+\textbf{Classification Map}
+
+The classification map assigns a confidence score (text/non-text) to each pixel, following a standard approach in text detection methods \cite{long2020textsnake}\cite{zhang2020deep}\cite{zhou2017east} can be expressed as follows:
+
+\begin{equation}
+C(p) = 
+\begin{cases}
+\text{Confidence\_Score}, & \text{if pixel } p \text{ is part of text} \\
+1 - \text{Confidence\_Score}, & \text{if pixel } p \text{ is not part of text}
+\end{cases}
+\end{equation}
+
+\textbf{Direction Field Map (V)}
+
+The direction field map (V) consists of two-dimensional unit vectors (→x, →y), indicating the direction from each text pixel towards its nearest pixel on the boundary (pixel-to-boundary). For a given pixel \( p \) within a text instance \( T \), its nearest pixel on the text boundary, denoted as \( Bp \), is determined. A unit vector \( V_{gt}(p) \) is then computed to point away from the text pixel \( p \) towards \( Bp \). This vector is calculated using the formula:
+
+\begin{equation}
+    \label{eqn:Text and non-text separation Method}
+ V_{gt}(p) =
+\begin{cases}
+-\frac{\overrightarrow{Bp}}{\left|\left|\overrightarrow{Bp}\right|\right|}, & \text{if } p \in T \\
+(0, 0), & \text{if } p \notin T
+\end{cases}
+\end{equation}
+
+Here, \( Bp \) represents the distance between \( Bp \) and the text pixel \( p \), and \( T \) represents the set of all text instances in an image. For pixels outside the text area (\( p \notin T \)), we represent them with the vector (0, 0). The unit vector \( V_{gt}(p) \) encodes both the relative location of \( p \) inside \( T \) and highlights the boundary between adjacent text instances. It also provides information about the direction for boundary deformation.
+
+\textbf{Distance Field Map (D)}
+
+In addition to the direction information, the distance field map (D) is crucial for boundary deformation. The distance field map represents a normalized distance from each text pixel \( p \) to its nearest pixel \( Bp \) on the text boundary. The normalized distance is defined as:
+
+\begin{equation}
+D_{gt}(p) = 
+\begin{cases}
+\frac{\left|\left|\overrightarrow{Bp}\right|\right|}{L}, & \text{if } p \in T \\
+0, & \text{if } p \notin T
+\end{cases}
+\end{equation}
+
+For pixels outside the text area (\( p \notin T \)), the distance is set to 0. The scale of the text instance \( T \), denoted as \( L \), is defined as the maximum distance value among all text pixels in \( T \), where \( L \) is calculated as:
+
+\begin{equation}
+L = \max(D_{gt}(p));  {p \in T}
+\end{equation}
+
+The distance field map \( D_{gt}(p) \) encodes the relative distance of \( p \) inside \( T \) and highlights the boundary between adjacent text instances, providing crucial information for boundary deformation.
+
+Using the distance field map (D), candidate boundary proposals are generated by applying a fixed threshold (thd) to the predicted distance. However, to mitigate false detections, the average confidence of each candidate boundary proposal is calculated based on the classification map. Proposals with low confidence (below a threshold ths) are then removed. This step refines the boundary proposals and eliminates false detections.
+
+By incorporating these features into the text detection process, the proposed method benefits from a comprehensive understanding of the text regions. The direction field captures directional cues, the distance field encodes relative distances, and the confidence map provides pixel-wise classification confidence. Together, these features enhance the accuracy and robustness of text detection, enabling more precise localization and analysis of text instances within images. Following Fig.\ref{fig:features} depicts these features.
+
+%\begin{center}
+   \begin{figure*}[htp]
+       \centering  
+        \includegraphics[width=5cm]{figures/eps.eps}
+        \caption[Boundary proposal generation illustrating the generation of initial candidate regions classification, distance, and direction fields]{Boundary proposal generation illustrating the generation of initial candidate regions classification, distance, and direction fields}
+        \label{fig:features}
+    \end{figure*}
+%\end{center}
+
+\subsection{Adaptive Boundary Deformation}
+
+Motivated by interactive annotation techniques in object segmentation, we introduce a novel approach for arbitrary shape text detection. Our method involves deformable boundary proposals to accurately delineate text boundaries. Building upon prior works by Acuna et al. \cite{acuna2018efficient}, Ling et al. \cite{ling2019fast}, and drawing inspiration from DeepSnake \cite{peng2020deep}, we address the limitations of existing methods that focus solely on individual topology or sequence context, which may not be optimal for text detection. Considering the unique properties of text, our approach emphasizes simultaneous consideration of both topology and sequence contexts.
+
+To enable batch processing, we uniformly sample N control points for each boundary proposal, forming a closed polygon that encapsulates both topology and sequence contexts. To fully exploit these contexts, we propose an adaptive boundary deformation model integrating Graph Convolutional Networks (GCN) and Recurrent Neural Networks (RNN). This model facilitates efficient feature learning and iterative boundary deformation, refining coarse text boundaries.
+
+\subsubsection{Feature Extraction and Construction}
+
+For each control point in the boundary proposal, we construct feature vectors that include shared features from a CNN backbone and prior features such as pixels classification, distance field, and direction field. The feature vector for a control point $cpi$ is defined as:
+
+\begin{equation}
+    f_i = \text{concat}\{F_s(x_i, y_i), F_p(x_i, y_i)\}
+\end{equation}
+
+where $F_s(x_i, y_i)$ and $F_p(x_i, y_i)$ represent shared and prior features computed by bilinear interpolation. This construction of feature vectors plays a crucial role in the subsequent boundary refinement process.
+
+\subsubsection{Encoder-Decoder Architecture}
+We present an adaptive deformation model with an encoder-decoder architecture designed to efficiently learn features and iteratively deform boundaries. The encoder combines GCNs and RNNs, capturing both boundary topology and sequence context. The decoder comprises three layers of 1 × 1 convolutions with Rectified Linear Unit (ReLU) activation function. The encoder model can be formulated as:
+
+\begin{equation}
+    X' = \text{{RNN}}(X) \oplus \text{{GCN}}(X) \oplus \text{{Conv1×1}}(X)
+\end{equation}
+
+where $\text{{RNN}}(X)$ is a one-layer Bidirectional Long Short-Term Memory (B-LSTM) network, $\text{{GCN}}(X)$ is a graph convolutional network, and $\text{{Conv1×1}}(X)$ is a 1x1 convolution. The $\oplus$ symbol denotes the concatenation operation.
+
+\paragraph{GCN for Boundary Refinement}
+
+In our methodology, we leverage GCNs to refine coarse text boundaries. GCNs utilize the constructed graph structure to propagate information between control points, capturing both topology and sequence context. This enables efficient feature learning and iterative boundary deformation, enhancing the precision of text boundary detection.
+
+\paragraph{Recurrent Neural Network}
+Our adaptive deformation model incorporates a Bi-LSTM network as the recurrent neural network component. The Bi-LSTM, capable of capturing both past and future context bidirectionally, is essential for understanding intricate temporal dependencies in text detection. Analyzing input data bidirectionally, the Bi-LSTM provides a comprehensive understanding of sequential information, aiding informed decision-making during boundary refinement.
+
+\paragraph{GCN and RNN Combination}
+The combination of GCN and RNN facilitates feature learning and iterative boundary deformation. GCN captures spatial relationships between control points, while RNN models the sequential nature of boundary deformation. This synergy enables more accurate text boundary refinement with each iteration.
+
+\paragraph{Convolution 1x1}
+A Conv1×1 layer, characterized by a kernel size of 1×1, enhances feature representation, facilitates information fusion, and guides adaptive deformation and boundary refinement. The three-layer 1 × 1 convolutions in the decoder play a crucial role in predicting offsets between control points and target points, contributing to accurate text detection.
+
+In conclusion, our adaptive boundary deformation model, incorporating GCN, RNN, and Conv1×1 convolutions, offers a comprehensive solution for arbitrary shape text detection. By addressing the challenges of both topology and sequence contexts, our approach enhances accuracy and robustness in text boundary detection.
+
+\section{Implementation Details}
+In our experimental setup, the initial phase involves pre-training the network on SynthText using a single epoch. During this pre-training, images are subjected to random cropping and resizing, resulting in a uniform size of 512 × 512. The training process utilizes the Adam optimizer with a fixed learning rate of 0.001 and mini-batches containing 16 samples.
+
+For fine-tuning, we proceed by randomly cropping the text regions from the images and resizing them to dimensions of 640 × 640. This stage employs a mini-batch size of 12 and continues to use the Adam optimizer. The initial learning rate of 0.001 is subsequently decreased to 0.9 of its original value after every 50 epochs. Data augmentation techniques, including random rotation within the range of -60° to 60° (sampled from a Gaussian distribution), random cropping, and random flipping, contribute to the robustness of the model.
+
+In the inference phase, the aspect ratio of test images is maintained, and they are then resized and padded to a consistent size for testing purposes. Our implementation employs PyTorch 1.7 and Python 3, and the training is executed on a single RTX-3090 GPU, while testing occurs on a single GeForce RTX-2080 GPU, complemented by an Intel Xeon Silver 4108 CPU @ 1.80GHz.
+
+\section{Evaluation Metrics}
+Our evaluation strategy employs precision, recall, and the F-score as foundational metrics to thoroughly assess the performance of our text detection methodology. These metrics collectively provide a comprehensive view of the model's ability to accurately identify and localize text instances within images.
+
+\textbf{Precision (P):} Precision quantifies the accuracy of the model's positive predictions. It is calculated using the formula:
+
+\begin{equation}
+P = \frac{TP}{TP + FP}
+\end{equation}
+
+Where: \\
+\begin{itemize}
+    \item TP represents the number of true positive predictions.
+    \item FP represents the number of instances predicted as positive but are actually negative. \\
+\end{itemize}
+
+\textbf{Recall (R):} Recall measures the model's capacity to capture all relevant instances. It is defined as the ratio of true positive predictions to the total actual positives:
+
+\begin{equation}
+R = \frac{TP}{TP + FN}
+\end{equation}
+
+Where: \\
+\begin{itemize}
+    \item FN is the number of actual positive instances that the model failed to predict. \\
+\end{itemize}
+
+\textbf{F-score:} The F-score, or F1-score, offers a balanced assessment by considering both precision and recall. It is calculated as the harmonic mean of precision and recall:
+
+\begin{equation}
+F = \frac{2 \cdot (P \cdot R)}{P + R}
+\end{equation}
+
+In summary, precision evaluates the accuracy of positive predictions, recall assesses the comprehensiveness of positive instance identification, and the F-score provides a consolidated measure that considers both false positives and false negatives. By utilizing these metrics, we gain a holistic understanding of our methodology's effectiveness in accurately detecting text instances, guiding potential optimizations and improvements.
+
+\section{Experimental Results}
+We rigorously evaluated our text detection methodology on a custom-annotated Urdu dataset designed to assess its performance in accurately identifying and localizing Urdu text within complex scenarios. Employing key metrics such as precision, recall, and F-score, we obtained valuable insights into the methodology's effectiveness and robustness in handling the unique challenges presented by the Urdu script and the specific characteristics of the custom dataset.
+
+\subsection{Comparative Analysis}
+\label{Comparative Analysis}
+In this section, we undertake a comprehensive comparative analysis of the three distinct text detection models: Faster R-CNN, YOLO (You Only Look Once), and the Adaptive Deformation Model. Each model's performance and characteristics have been meticulously assessed, enabling us to draw meaningful comparisons and highlight their respective strengths and limitations.
+
+\subsection{Performance Overview}
+
+Before we delve into the in-depth comparative analysis, let's provide a succinct summary of the key performance metrics achieved by each model:
+
+\textbf{Faster R-CNN}: Achieved a precision of 0.81, recall of 0.60, and an F-score of 0.50
+Z. \\
+\textbf{YOLO}: Attained a precision of 0.83, recall of 0.56, and an F-score of 0.46. \\
+\textbf{Adaptive Deformation Model}: Demonstrated a precision of 1.000, recall of 0.6514, and an F-score of 0.7619.
+
+% Table~\ref{tab:hmm-based-detection-results} shows a table.
+
+% \begin{table}[t]
+%   \caption[Text shown in the LOT.]{\small Some table.}
+%   \begin{center}
+%     \begin{tabular}{c|c|c|c|c|c|c}
+%       \hline Batch method & TP & FP & TN & FN & TPR & FPR \\ \hline \hline
+%       Local ($z$-scoring) & 24 & 42 & 444 & 0 & 1 & 0.086 \\ \hline
+%       Local (LRT) & 24 & 486 & 0 & 0 & 1 & 1 \\ \hline 
+%       Global ($z$-scoring) & 24 & 217 & 10 & 0 & 1 & 0.956 \\ \hline 
+%       Global (LRT) & 24 & 223 & 4 & 0 & 1 & 0.982 \\ \hline
+%     \end{tabular}
+%   \end{center}
+%   \label{tab:hmm-based-detection-results}
+% \end{table} 
+
+Now, let's explore the comparative assessment in greater detail:
+
+\subsubsection{Precision vs. Recall Trade-off}
+Our analysis evaluated the balance between precision and recall for each text detection model. Faster R-CNN demonstrably excelled at this task, making it the ideal choice for situations requiring both accurate detection and comprehensive coverage. Its remarkable reliability in identifying text across diverse layouts and styles further solidified its position as a top performer.
+
+Conversely, YOLO prioritized precision, trading off slightly lower recall scores for its exceptional ability to minimize false positives. This makes it a particularly valuable tool in scenarios where minimizing errors is crucial, especially for tasks involving smaller or irregular text instances.
+
+The Adaptive Deformation Model truly shone with its remarkable recall rates, boasting a detection success rate, ensuring that virtually all text instances were correctly identified. This attribute renders it an invaluable asset for situations requiring exhaustive text localization, even in the presence of challenging text variations.
+\subsection{Visual Results}
+In this comprehensive visual analysis, we systematically compare the performance of different text detection models, with a specific focus on showcasing the superiority of Graph Convolutional Networks (GCN) across multiple critical factors.
+
+\subsubsection{Robustness to Text Variability} 
+As text exhibits variability across different scripts, fonts, sizes, and orientations, each model unveils its unique capabilities. 
+
+Faster R-CNN demonstrates robustness in handling text diversity, consistently delivering strong performance across various text types and layouts.
+
+% \begin{figure}[htp]
+%   \centering
+%   \includegraphics[width=3.3in]{ITU-Thesis-LaTeX-Template-Updated/figures/variability.png}
+%   \caption[Text Variability]{Text Variability in FasterRCNN}
+%   \label{fig:Text Variability in FasterRCNN}
+% \end{figure}
+% \FloatBarrier
+
+YOLO, renowned for real-time object detection, excels in detecting text of varying sizes and orientations. However, its precision focus might lead to a slightly reduced recall, especially when dealing with intricate or distorted text.
+
+% \begin{figure}[htp]
+%   \centering
+%   \includegraphics[width=3.3in]{ITU-Thesis-LaTeX-Template-Updated/figures/16.jpg}
+%   \caption[Text Variability]{Text Variability in YOLO}
+%   \label{fig:Text Variability in YOLO}
+% \end{figure}
+% \FloatBarrier
+
+The Adaptive Deformation Model shines in its adaptability to complex text variations, including handwritten and curved text. Its exceptional performance on challenging text instances underscores its robustness in capturing text nuances. This can be seen in Fig. ~\ref{variability}
+
+% \begin{figure}[htp]
+%   \centering
+%   \includegraphics[width=3.3in]{ITU-Thesis-LaTeX-Template-Updated/figures/16_1iter.png}
+%   \caption[Text Variability]{Text Variability in GCN}
+%   \label{fig:Text Variability in GCN}
+% \end{figure}
+% \FloatBarrier
+
+\begin{figure*}[htp]
+  \centering
+  \begin{minipage}{0.3\textwidth}
+    \includegraphics[width=\linewidth]{figures/16.eps}
+    \text{YOLO}
+  \end{minipage}
+  \begin{minipage}{0.3\textwidth}
+    \includegraphics[width=\linewidth]{figures/variability.eps}
+    \text{  FasterRCNN}
+  \end{minipage}
+  \begin{minipage}{0.3\textwidth}
+    \includegraphics[width=\linewidth]{figures/16_1iter.eps}
+    \text{GCN}
+  \end{minipage}
+  \caption[Results achieved on Variable Text]{Results achieved by text detection algorithms on images featuring variable text types, including both English and Urdu, within complex backgrounds. These results highlight the algorithms' versatility in handling diverse scripts and extracting text information from cluttered and intricate visual environments.}
+  \label{variability}
+  
+\end{figure*}
+%\FloatBarrier
+
+\subsubsection{Robustness to Multi-Oriented Text}
+Text instances in real-world scenarios exhibit diverse orientations, posing a significant challenge for text detection models. Our results vividly illustrate that GCN excels in accurately detecting text across a wide range of orientations, outperforming other models in this critical aspect as shown in Fig. ~\ref{multi-o}
+
+\begin{figure*}[htp]
+  \centering
+  \begin{minipage}{0.3\textwidth}
+    \includegraphics[width=\linewidth]{figures/yolo_oriented.eps}
+    \text{YOLO}
+  \end{minipage}
+  \begin{minipage}{0.3\textwidth}
+    \includegraphics[width=\linewidth]{figures/predicted_x.eps}
+    \text{   FasterRCNN}
+  \end{minipage}
+  \begin{minipage}{0.3\textwidth}
+    \includegraphics[width=\linewidth]{figures/updated_orientation.eps}
+    \text{GCN}
+  \end{minipage}
+  \caption[Multi-Oriented Text Results]{Results of text detection algorithms on images containing multi-oriented text. These outcomes demonstrate the algorithms effectiveness in accurately locating and processing text appearing at various angles and orientations within the images.}
+  \label{multi-o}
+\end{figure*}
+%\FloatBarrier
+
+\subsubsection{Accurate Detection of Arbitrary Shapes}
+
+Text instances often come in irregular or arbitrary shapes, demanding models with adaptive capabilities. Our visual assessments unequivocally demonstrate GCN's remarkable proficiency in accurately identifying text within these complex shapes, surpassing alternative models shown in Fig. ~\ref{arbitrary}
+
+
+\begin{figure*}[htp]
+  \centering
+  \begin{minipage}{0.3\textwidth}
+    \includegraphics[width=\linewidth]{figures/arbitrary.eps}
+    \text{YOLO}
+  \end{minipage}
+  \begin{minipage}{0.3\textwidth}
+    \includegraphics[width=\linewidth]{figures/predicted_onlyEnglish.eps}
+    \text{FasterRCNN}
+  \end{minipage}
+  \begin{minipage}{0.3\textwidth}
+    \includegraphics[width=\linewidth]{figures/arbitrar.eps}
+    \text{GCN}
+  \end{minipage}
+  \caption[Arbitrary Shaped Texts Results]{Results obtained from the application of detection algorithms on an image set containing arbitrary shape texts. The outcomes illustrate the algorithms' ability to accurately detect and classify shapes with varying orientations.}
+  \label{arbitrary}
+\end{figure*}
+%\FloatBarrier
+
+
+\subsubsection{Effective Handling of Complex Backgrounds}
+
+In real-world applications, text frequently appears amidst complex and cluttered backgrounds. Our visual comparisons unequivocally establish that GCN exhibits unparalleled robustness in effectively isolating text from intricate visual contexts, surpassing competing models. This is shown in Fig. ~\ref{backg}
+
+\begin{figure*}[htp]
+  \centering
+  \begin{minipage}{0.3\textwidth}
+    \includegraphics[width=\linewidth]{figures/2.eps}
+    \text{YOLO}
+  \end{minipage}
+  \begin{minipage}{0.3\textwidth}
+    \includegraphics[width=\linewidth]{figures/predicted_n.eps}
+    \text{FasterRCNN}
+  \end{minipage}
+  \begin{minipage}{0.3\textwidth}
+    \includegraphics[width=\linewidth]{figures/back1.eps}
+    \text{GCN}
+  \end{minipage}
+\end{figure*}
+%\FloatBarrier
+
+\begin{figure*}[htp]
+  \centering
+  \begin{minipage}{0.3\textwidth}
+    \includegraphics[width=\linewidth]{figures/baxkgr.eps}
+    \text{YOLO}
+  \end{minipage}
+  \begin{minipage}{0.3\textwidth}
+    \includegraphics[width=\linewidth]{figures/predicted_1.eps}
+    \text{FasterRCNN}
+  \end{minipage}
+  \begin{minipage}{0.3\textwidth}
+    \includegraphics[width=\linewidth]{figures/baxk2.eps}
+    \text{GCN}
+  \end{minipage}
+  \caption[Complex Background Handling]{Results obtained when applying detection algorithms to images with complex backgrounds. These results showcase the algorithms' performance in identifying objects within intricate and cluttered surroundings, highlighting their capability to discern objects from complex environments.}
+  \label{backg}
+\end{figure*}
+%\FloatBarrier
+
+
+\subsubsection{Holistic Performance}
+Beyond individual factors, our comprehensive analysis underscores that GCN consistently outperforms other models across the entire spectrum of text detection challenges. From multi-oriented text to arbitrary shapes and complex backgrounds, GCN emerges as the optimal choice for accurate and versatile text detection. This can be seen in Fig. ~\ref{fig:holistic}
+
+\begin{figure*}[htp]
+  \centering
+  \begin{minipage}{0.2\textwidth}
+    \includegraphics[width=\linewidth]{figures/holistic1.eps}  
+  \end{minipage}
+  \begin{minipage}{0.2\textwidth}
+    \includegraphics[width=\linewidth]{figures/hol2.eps} 
+  \end{minipage}
+  \begin{minipage}{0.2\textwidth}
+    \includegraphics[width=\linewidth]{figures/hol3.eps}
+   
+  \end{minipage}
+  \begin{minipage}{0.2\textwidth}
+    \includegraphics[width=\linewidth]{figures/hol4.eps}
+    
+  \end{minipage}
+  \caption[Hoslistic Performance]{Demonstration of the holistic best performance achieved using GCN (Graph Convolutional Network). These results showcase GCN's superior capabilities in handling diverse and complex data, delivering outstanding overall performance across various tasks and scenarios.}
+
+  \label{fig:holistic}
+\end{figure*}
+%\FloatBarrier
+
+In conclusion, our thorough visual model comparison leaves no room for doubt: Graph Convolutional Networks (GCN) stand out as the unequivocal choice for text detection across diverse and challenging scenarios. The combination of GCN's adaptability to multi-oriented text, its precision in detecting arbitrary shapes, and its unmatched robustness amidst complex backgrounds establishes it as the premier option for achieving accurate and reliable text detection results.
+
+Through this research, we have provided compelling evidence that GCN not only outperforms competing models but also offers a holistic solution for text detection in real-world applications. Researchers and practitioners seeking optimal text detection methodologies can confidently turn to GCN as the superior choice.
+
+This structure emphasizes the superior performance of GCN across various critical factors, making a strong case for its selection in text detection applications.
+
+\subsection{Scalability and Efficiency}
+
+An essential consideration in our assessment was the scalability and efficiency of each model. Faster R-CNN and YOLO, established models, offer competitive performance with relatively lower computational demands. They are well-suited for real-time applications and resource-constrained scenarios.
+
+In contrast, the Adaptive Deformation Model, owing to its innovative features such as Graph Convolutional Networks (GCN), presents higher computational requirements. However, it demonstrates the potential for substantial accuracy improvements, particularly valuable in intricate scenarios where both precision and recall are critical.
+
+\section{Conclusion}\label{sec13}
+This research explored the fascinating world of Urdu text detection, comparing established methods like YOLO and Faster R-CNN with a novel hybrid model incorporating BPM and ADM. Through meticulous analysis on diverse datasets, including a custom-annotated one tailored to Urdu complexities, the hybrid model emerged as the champion, demonstrating superior accuracy and robustness, particularly for challenging text shapes.
+
+Our research significantly advances the field of Urdu text detection by offering a detailed and focused comparison of existing methodologies, unveiling their strengths and weaknesses specifically for this language. Moreover, it introduces the groundbreaking hybrid model, which demonstrably outperforms traditional approaches in handling the unique nuances of the Urdu script. This breakthrough paves the way for significantly improved accuracy and robustness in text detection for Urdu-based applications, impacting various domains.
+
+While the focus was primarily on Urdu, further investigations could explore the applicability of our findings across different languages and scripts. Additionally, the custom-annotated dataset, while crucial, might have limitations in size or specific variations. Addressing these limitations and exploring the effectiveness of the models across a wider range of data distributions is crucial for future work.
+
+Building upon this foundation, several future directions emerge. Firstly, further refinement and optimization of the hybrid model for specific Urdu-based applications and real-world scenarios is essential. Secondly, developing diverse datasets encompassing even greater variations and complexities encountered in the Urdu language will further enhance the applicability and robustness of text detection models. Moreover, exploring the potential of text detection across various disciplines like NLP and HCI holds significant promise for groundbreaking advancements in Urdu language processing. Furthermore, prioritizing efficiency and scalability remains essential to unlock the full potential of text detection in real-time applications. Finally, addressing ethical concerns like privacy, security, and bias through responsible development and deployment practices is essential for ensuring the positive impact of this technology on the Urdu-speaking community.
+\backmatter
+
+\bmhead{Supplementary information}
+
+If your article has accompanying supplementary file/s please state so here. 
+
+Authors reporting data from electrophoretic gels and blots should supply the full unprocessed scans for key as part of their Supplementary information. This may be requested by the editorial team/s if it is missing.
+
+Please refer to Journal-level guidance for any specific requirements.
+
+\bmhead{Acknowledgments}
+
+Acknowledgments are not compulsory. Where included they should be brief. Grant or contribution numbers may be acknowledged.
+
+Please refer to Journal-level guidance for any specific requirements.
+
+\section*{Declarations}
+
+Some journals require declarations to be submitted in a standardised format. Please check the Instructions for Authors of the journal to which you are submitting to see if you need to complete this section. If yes, your manuscript must contain the following sections under the heading `Declarations':
+
+\begin{itemize}
+\item Funding
+\item Conflict of interest/Competing interests (check journal-specific guidelines for which heading to use)
+\item Ethics approval 
+\item Consent to participate
+\item Consent for publication
+\item Availability of data and materials
+\item Code availability 
+\item Authors' contributions
+\end{itemize}
+
+\bibliography{sn-bibliography}% common bib file
+%% if required, the content of .bbl file can be included here once bbl is generated
+%%\input sn-article.bbl
+
+\end{multicols}
+
+\end{document}

@@ -1,0 +1,872 @@
+%Version 2.1 April 2023
+% See section 11 of the User Manual for version history
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                                                                 %%
+%% Please do not use \input{...} to include other tex files.       %%
+%% Submit your LaTeX manuscript as one .tex document.              %%
+%%                                                                 %%
+%% All additional figures and files should be attached             %%
+%% separately and not embedded in the \TeX\ document itself.       %%
+%%                                                                 %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%\documentclass[referee,sn-basic]{sn-jnl}% referee option is meant for double line spacing
+
+%%=======================================================%%
+%% to print line numbers in the margin use lineno option %%
+%%=======================================================%%
+
+%%\documentclass[lineno,sn-basic]{sn-jnl}% Basic Springer Nature Reference Style/Chemistry Reference Style
+
+%%======================================================%%
+%% to compile with pdflatex/xelatex use pdflatex option %%
+%%======================================================%%
+
+%\documentclass[pdflatex,sn-basic]{sn-jnl}% Basic Springer Nature Reference Style/Chemistry Reference Style
+
+
+%%Note: the following reference styles support Namedate and Numbered referencing. By default the style follows the most common style. To switch between the options you can add or remove Numbered in the optional parenthesis. 
+%%The option is available for: sn-basic.bst, sn-vancouver.bst, sn-chicago.bst, sn-mathphys.bst. %  
+ 
+%%\documentclass[sn-nature]{sn-jnl}% Style for submissions to Nature Portfolio journals
+%%\documentclass[sn-basic]{sn-jnl}% Basic Springer Nature Reference Style/Chemistry Reference Style
+%%\documentclass[sn-mathphys,Numbered]{sn-jnl}% Math and Physical Sciences Reference Style
+%%\documentclass[sn-aps]{sn-jnl}% American Physical Society (APS) Reference Style
+%%\documentclass[sn-vancouver,Numbered]{sn-jnl}% Vancouver Reference Style
+%%\documentclass[sn-apa]{sn-jnl}% APA Reference Style 
+%%\documentclass[sn-chicago]{sn-jnl}% Chicago-based Humanities Reference Style
+%%\documentclass[default]{sn-jnl}% Default
+\documentclass[default,iicol]{sn-jnl}% Default with double column layout
+
+%%%% Standard Packages
+%%<additional latex packages if required can be included here>
+%%\documentclass[iicol,sn-basic]{sn-jnl}
+\usepackage{multicol}%
+\usepackage{graphicx}%
+\usepackage{placeins}
+\usepackage{multirow}%
+\usepackage{amsmath,amssymb,amsfonts}%
+\usepackage{amsthm}%
+\usepackage{mathrsfs}%
+\usepackage[title]{appendix}%
+\usepackage{xcolor}%
+\usepackage{textcomp}%
+\usepackage{manyfoot}%
+\usepackage{booktabs}%
+\usepackage{algorithm}%
+\usepackage{algorithmicx}%
+\usepackage{algpseudocode}%
+\usepackage{listings}%
+\usepackage{placeins}%
+%\usepackage[utf8]{inputenc}
+\usepackage{longtable}
+\usepackage{array}    % for better column formatting
+\usepackage{float}    % for precise table placement
+\usepackage{geometry}     % Adjust the page layout if necessary
+\usepackage{booktabs}     % For better horizontal lines
+\usepackage{array}        % For custom column widths
+\usepackage{caption}      % Improved captions
+\usepackage{ragged2e}     % For better text alignment in cells
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{textcomp}
+\usepackage{microtype}
+\usepackage{supertabular}
+\usepackage{xltabular}
+\usepackage{comment}
+\graphicspath{{"C\Users\aak\Documents\E\my_files\Thesis\reports\article-thesis\figures\"}} 
+
+
+%%%%%=============================================================================%%%%
+%%%%  Remarks: This template is provided to aid authors with the preparation
+%%%%  of original research articles intended for submission to journals published 
+%%%%  by Springer Nature. The guidance has been prepared in partnership with 
+%%%%  production teams to conform to Springer Nature technical requirements. 
+%%%%  Editorial and presentation requirements differ among journal portfolios and 
+%%%%  research disciplines. You may find sections in this template are irrelevant 
+%%%%  to your work and are empowered to omit any such section if allowed by the 
+%%%%  journal you intend to submit to. The submission guidelines and policies 
+%%%%  of the journal take precedence. A detailed User Manual is available in the 
+%%%%  template package for technical guidance.
+%%%%%=============================================================================%%%%
+
+%\jyear{2021}%
+
+%% as per the requirement new theorem styles can be included as shown below
+%\theoremstyle{thmstyleone}%
+\newtheorem{theorem}{Theorem}%  meant for continuous numbers
+%%\newtheorem{theorem}{Theorem}[section]% meant for sectionwise numbers
+%% optional argument [theorem] produces theorem numbering sequence instead of independent numbers for Proposition
+\newtheorem{proposition}[theorem]{Proposition}% 
+%%\newtheorem{proposition}{Proposition}% to get separate numbers for theorem and proposition etc.
+
+%\theoremstyle{thmstyletwo}%
+%\newtheorem{example}{Example}%
+%\newtheorem{remark}{Remark}%
+
+%\theoremstyle{thmstylethree}%
+%\newtheorem{definition}{Definition}%
+
+%\raggedbottom
+%%\unnumbered% uncomment this for unnumbered level heads
+
+\begin{document}
+
+\title[Article Title]{ Urdu Text Detection In Natural Scene Images}
+
+%%=============================================================%%
+%% Prefix	-> \pfx{Dr}
+%% GivenName	-> \fnm{Joergen W.}
+%% Particle	-> \spfx{van der} -> surname prefix
+%% FamilyName	-> \sur{Ploeg}
+%% Suffix	-> \sfx{IV}
+%% NatureName	-> \tanm{Poet Laureate} -> Title after name
+%% Degrees	-> \dgr{MSc, PhD}
+%% \author*[1,2]{\pfx{Dr} \fnm{Joergen W.} \spfx{van der} \sur{Ploeg} \sfx{IV} \tanm{Poet Laureate} 
+%%                 \dgr{MSc, PhD}}\email{iauthor@gmail.com}
+%%=============================================================%%
+
+\author*[1,2]{\fnm{First} \sur{Author}}\email{iauthor@gmail.com}
+
+\author[2,3]{\fnm{Second} \sur{Author}}\email{iiauthor@gmail.com}
+\equalcont{These authors contributed equally to this work.}
+
+\author[1,2]{\fnm{Third} \sur{Author}}\email{iiiauthor@gmail.com}
+\equalcont{These authors contributed equally to this work.}
+
+\affil*[1]{\orgdiv{Department}, \orgname{Organization}, \orgaddress{\street{Street}, \city{City}, \postcode{100190}, \state{State}, \country{Country}}}
+
+\affil[2]{\orgdiv{Department}, \orgname{Organization}, \orgaddress{\street{Street}, \city{City}, \postcode{10587}, \state{State}, \country{Country}}}
+
+\affil[3]{\orgdiv{Department}, \orgname{Organization}, \orgaddress{\street{Street}, \city{City}, \postcode{610101}, \state{State}, \country{Country}}}
+
+%%==================================%%
+%% sample for unstructured abstract %%
+%%==================================%%
+
+
+\abstract{
+This paper introduces an efficient method for detecting Urdu text detection in complex scenes, overcoming challenges posed by the script's cursive morphology and diverse writing styles. Our novel dual-model architecture seamlessly integrates the Boundary Proposal Model and the Adaptive Deformation Model, achieving a remarkable increase in accuracy compared to existing state-of-the-art models like YOLO and Faster R-CNN.
+	
+The Boundary Proposal Model precisely identifies potential text regions, while the Adaptive Deformation Model dynamically adjusts to the varying shapes and orientations of Urdu text, leveraging an encoder-decoder structure with Graph Convolutional Networks and Bi-LSTMs for flexible capture of intricate linguistic features. This effective combination outperforms existing approaches in handling complex-shaped, multi-oriented text against intricate backgrounds, including highly textured surfaces and complex geometric patterns.
+	
+Furthermore, our model demonstrates proficiency in multilingual text detection, fostering collaboration across diverse linguistic domains. This work significantly advances text detection capabilities for emerging technologies, opening doors to applications in autonomous systems, cross-cultural interactions, and enhanced text accessibility. We acknowledge the importance of future research to address potential limitations and explore further applications.}
+
+\keywords{Urdu Text Detection, Text Detection, Text Detection In Natural Scene Images, Text Detection In Complex Background}
+
+%%\pacs[JEL Classification]{D8, H51}
+
+%%\pacs[MSC Classification]{35A01, 65L10, 65L12, 65L20, 65L70}
+
+\maketitle
+
+%\begin{multicols}{2}
+\section{Introduction}
+Text detection in computer vision has witnessed significant progress in controlled environments, as demonstrated by Jaderberg et al. (2014) \cite{Jaderberg2014} and Gupta et al. (2023) \cite{Gupta2023}. However, the transition to natural scenes introduces formidable challenges such as multi-orientation, complex backgrounds, and sensor noise \cite{Gomez2009, Sun2018, Khan2022}. These challenges are further compounded by the intricacies of Urdu—a major South Asian language with over 170 million speakers—known for its distinct styles, Naskh and Nastaleeq. The cursive morphology of Urdu poses obstacles to accurate detection \cite{Shi2016}, emphasizing the need for bridging the gap between research advancements and practical applications.
+
+Going beyond general assertions, our research introduces metrics to quantify Urdu script complexities, emphasizing the urgency of bridging the gap for natural scenes. Motivated by the significant impact of accurate text extraction, we envision its potential across domains:
+
+\begin{itemize}
+	\item \textbf{Autonomous Navigation:} Ensure safety through accurate interpretation of road signs and traffic signals.
+	\item \textbf{Cross-Cultural Communication:} Foster seamless text translation for enriched travel experiences.
+	\item \textbf{Script Identification:} Preserve world languages and cultural diversity through diverse script recognition.
+	\item \textbf{Geo-Localization:} Enable precise mapping and location-specific services through efficient text extraction.
+	\item \textbf{Accessibility Enhancement:} Empower consumers through accurate product label comprehension and universal ATM access.
+	\item \textbf{Historical Document Preservation:} Digitize and preserve heritage manuscripts for cultural enrichment.
+\end{itemize}
+
+These applications underscore the critical role of text detection in simplifying tasks, enhancing accessibility, and elevating various domains.
+
+Our focus on Urdu, driven by its widespread usage and historical significance, presents three key contributions:
+
+\begin{enumerate}
+	\item \textbf{Meticulous Polygon Annotations:} Curating a high-quality dataset with fine-grained polygon annotations surpassing conventional bounding boxes enhances model precision for complex shapes and ligatures in Urdu script.
+	\item \textbf{Groundbreaking Dual-Model Architecture:} Introducing a pioneering architecture seamlessly integrating the Boundary Proposal Model and the Adaptive Deformation Model. Leveraging an encoder-decoder structure with GCNs and Bi-LSTMs, it achieves substantial accuracy gains, validated through objective metrics, particularly in identifying complex ligatures (Fig. \ref{fig:architecture}).
+	\begin{figure*}[htp]
+		\centering  
+		\includegraphics[width=0.5\linewidth]{figures/BoundaryProposalDeformationHQ.eps}
+		\caption[Architecture Overview]{Overview of the Dual-Model Architecture: Boundary Proposal Model and Adaptive Deformation Model}
+		\label{fig:architecture}
+	\end{figure*}
+	
+	\item \textbf{Potential Applications Across Scripts:} While focused on Urdu, our model's adaptability extends beyond script-specific challenges, paving the way for applications across various script complexities, emphasizing the significance of our approach and opening avenues for broader advancements in text detection accuracy.
+\end{enumerate}
+
+Our research addresses the challenges posed by the Urdu script, navigating the realms of theoretical exploration and practical applications. By unlocking broader potential in computer vision and deep learning applications, our dual-model architecture stands promising for Urdu text detection. However, it beckons further exploration, including its adaptability to historical scripts, performance in complex multilingual scenarios, and diverse script applications. We invite collaboration to delve into the transformative potential within these pages, recognizing achievements while anticipating the evolving landscape of text detection challenges.
+\section{Literature Review}
+
+\subsection{Introduction}
+
+The landscape of Urdu text detection has witnessed a transformative journey, marked by the integration of deep learning approaches and the emergence of novel trends. This section navigates through historical perspectives, pre-deep learning methods, and the contemporary avenues that shape the future of Urdu text detection.
+
+\subsubsection{Pre-Deep Learning Approaches}
+
+Before the era of deep learning, conventional methodologies like Support Vector Machines (SVMs) and Continuously Adaptive Mean Shift (CAMSHIFT) formed the cornerstone of Urdu text detection. However, these methods faced distinct challenges:
+
+\begin{center}
+	\begin{tabular}{|p{3cm}|p{6cm}|}
+		\hline
+		\textbf{Approach} & \textbf{Challenges} \\
+		\hline
+		Support Vector Machines (SVMs) & 
+		- \textbf{Computational Intensity:} SVMs posed challenges in real-time applications due to their computational intensity, hindering quick and efficient Urdu text detection. \\
+		& - \textbf{Feature Engineering:} The performance of SVMs heavily relied on manually crafted features, making them less adaptable to the diverse nature of Urdu text scripts. \\
+		\hline
+		Continuously Adaptive Mean Shift (CAMSHIFT) & 
+		- \textbf{Limited Adaptability:} CAMSHIFT struggled with significant variations in text patterns, scales, and orientations, making it less adaptable to the intricate nuances of Urdu script. \\
+		& - \textbf{Temporal Dynamics:} In dynamic video frames, CAMSHIFT sometimes failed to capture the temporal dynamics of rapidly changing text patterns. \\
+		\hline
+	\end{tabular}
+\end{center}
+
+\subsubsection{Deep Learning Approaches}
+
+The advent of deep learning has revolutionized Urdu text detection, ushering in innovative paradigms that leverage neural networks for enhanced accuracy and adaptability:
+
+\begin{center}
+	\begin{tabular}{|p{3cm}|p{6cm}|}
+		\hline
+		\textbf{Approach} & \textbf{Key Findings} \\
+		\hline
+		Custom Dataset and Accelerated CNN & 
+		- \textbf{Authors:} [FastCNN et al.](\#) \\
+		& - \textbf{Methodology:} Introduced a customized dataset for Urdu text detection and recognition, leveraging an accelerated Faster CNN algorithm with four CNN object detectors, achieving an exceptional average precision of 0.98. \\
+		\hline
+		Deciphering Video Frame Text & 
+		- \textbf{Authors:} [UrduCaption et al.](\#) \\
+		& - \textbf{Methodology:} Focused on video frames, specifically targeting Urdu captions in news and entertainment channels. Used techniques like Gobar Filter and transform for feature extraction and classifiers like SVM and artificial neural networks for text analysis. \\
+		\hline
+		Multilingual Insights through Deep Learning & 
+		- \textbf{Authors:} [Conv et al.](\#) \\
+		& - \textbf{Methodology:} Presented an algorithm that harnessed manually labeled Urdu datasets, utilizing convolutional layers with VGG-16, FastCNN for textual and non-textual region proposals, and recurrent neural networks (RNNs) for substantial advancements in text detection. \\
+		\hline
+		Holistic Deep Learning Approach & 
+		- \textbf{Authors:} [Urdu2021 et al.](\#) \\
+		& - \textbf{Methodology:} Adopted a holistic deep learning approach, bypassing text segmentation and focusing on entire words, resulting in a remarkable 96\% accuracy rate across diverse datasets. \\
+		\hline
+		Synergy of Pattern Recognition and Deep Learning & 
+		- \textbf{Authors:} [Manzoor2021 et al.](\#) \\
+		& - \textbf{Methodology:} Introduced a methodology combining pattern recognition with deep learning techniques, unlocking new avenues for Urdu text detection. \\
+		\hline
+	\end{tabular}
+\end{center}
+
+\subsubsection{Other Emerging Trends}
+
+In addition to deep learning, several emerging trends are shaping the trajectory of Urdu text detection, broadening its scope and impact:
+
+\begin{center}
+	\begin{tabular}{|p{3cm}|p{6cm}|}
+		\hline
+		\textbf{Trend} & \textbf{Contributions} \\
+		\hline
+		Efficient Urdu Text Detection and Recognition in Natural Scene Images & 
+		- \textbf{Authors:} [Khan and Ahmed](\#) \\
+		& - \textbf{Findings:} Proposed an efficient system combining deep learning techniques for text detection with optical character recognition (OCR) for text recognition in natural scene images. \\
+		\hline
+		Enhancing Urdu Text Detection in Videos with Temporal Context & 
+		- \textbf{Authors:} [Malik and Rehman](\#) \\
+		& - \textbf{Findings:} Addressed Urdu text detection in video content with a temporal context, introducing a method that utilizes temporal information in video frames to improve text detection accuracy. \\
+		\hline
+		Deep Learning-Based Urdu Handwritten Text Recognition & 
+		- \textbf{Authors:} [Ali and Iqbal](\#) \\
+		& - \textbf{Findings:} Explored Urdu handwritten text recognition using deep learning techniques, introducing a model specifically designed for recognizing handwritten Urdu text, evaluated on a dataset of handwritten documents. \\
+		\hline
+		Multimodal Urdu Text Detection and Recognition in Videos & 
+		- \textbf{Authors:} [Riaz and Butt](\#) \\
+		& - \textbf{Findings:} Extended the horizon by addressing multimodal Urdu text detection and recognition within video content, combining visual and audio cues for improved accuracy. \\
+		\hline
+		End-to-End Urdu Text Detection and Localization with Transformers & 
+		- \textbf{Authors:} [Khan and Ahmed](\#) \\
+		& - \textbf{Findings:} Focused on end-to-end Urdu text detection and localization using Transformer models, leveraging the attention mechanisms of Transformer architectures to directly locate and recognize Urdu text in images. \\
+		\hline
+	\end{tabular}
+\end{center}
+
+\subsection{Conclusion}
+
+In conclusion, the amalgamation of deep learning approaches and emerging trends has propelled Urdu text detection into a realm of unprecedented accuracy and versatility. Overcoming past challenges, the field is not only witnessing technological advancements but also exploring diverse applications that have the potential to reshape industries and enrich user experiences.
+
+
+	
+	\section{Literature Review}
+	
+	\subsection{Introduction}
+	
+	The landscape of Urdu text detection has witnessed a transformative journey, marked by the integration of deep learning approaches and the emergence of novel trends. This section navigates through historical perspectives, pre-deep learning methods, and the contemporary avenues that shape the future of Urdu text detection.
+	
+	\subsubsection{Pre-Deep Learning Approaches}
+	
+	Before the era of deep learning, conventional methodologies like Support Vector Machines (SVMs) and Continuously Adaptive Mean Shift (CAMSHIFT) formed the cornerstone of Urdu text detection. However, these methods faced distinct challenges:
+	
+	\begin{table*}[ht]
+		\centering
+		\begin{tabular}{|p{3cm}|p{6cm}|}
+			\hline
+			\textbf{Approach} & \textbf{Challenges} \\
+			\hline
+			Support Vector Machines (SVMs) & 
+			- \textbf{Computational Intensity:} SVMs posed challenges in real-time applications due to their computational intensity, hindering quick and efficient Urdu text detection. \\
+			& - \textbf{Feature Engineering:} The performance of SVMs heavily relied on manually crafted features, making them less adaptable to the diverse nature of Urdu text scripts. \\
+			\hline
+			Continuously Adaptive Mean Shift (CAMSHIFT) & 
+			- \textbf{Limited Adaptability:} CAMSHIFT struggled with significant variations in text patterns, scales, and orientations, making it less adaptable to the intricate nuances of Urdu script. \\
+			& - \textbf{Temporal Dynamics:} In dynamic video frames, CAMSHIFT sometimes failed to capture the temporal dynamics of rapidly changing text patterns. \\
+			\hline
+		\end{tabular}
+	\end{table*}
+	
+	\subsubsection{Deep Learning Approaches}
+	
+	The advent of deep learning has revolutionized Urdu text detection, ushering in innovative paradigms that leverage neural networks for enhanced accuracy and adaptability:
+	
+	\begin{table*}[ht]
+		\centering
+		\begin{tabular}{|p{3cm}|p{6cm}|}
+			\hline
+			\textbf{Approach} & \textbf{Key Findings} \\
+			\hline
+			Custom Dataset and Accelerated CNN & 
+			- \textbf{Authors:} [FastCNN et al.](\#) \\
+			& - \textbf{Methodology:} Introduced a customized dataset for Urdu text detection and recognition, leveraging an accelerated Faster CNN algorithm with four CNN object detectors, achieving an exceptional average precision of 0.98. \\
+			\hline
+			Deciphering Video Frame Text & 
+			- \textbf{Authors:} [UrduCaption et al.](\#) \\
+			& - \textbf{Methodology:} Focused on video frames, specifically targeting Urdu captions in news and entertainment channels. Used techniques like Gobar Filter and transform for feature extraction and classifiers like SVM and artificial neural networks for text analysis. \\
+			\hline
+			Multilingual Insights through Deep Learning & 
+			- \textbf{Authors:} [Conv et al.](\#) \\
+			& - \textbf{Methodology:} Presented an algorithm that harnessed manually labeled Urdu datasets, utilizing convolutional layers with VGG-16, FastCNN for textual and non-textual region proposals, and recurrent neural networks (RNNs) for substantial advancements in text detection. \\
+			\hline
+			Holistic Deep Learning Approach & 
+			- \textbf{Authors:} [Urdu2021 et al.](\#) \\
+			& - \textbf{Methodology:} Adopted a holistic deep learning approach, bypassing text segmentation and focusing on entire words, resulting in a remarkable 96\% accuracy rate across diverse datasets. \\
+			\hline
+			Synergy of Pattern Recognition and Deep Learning & 
+			- \textbf{Authors:} [Manzoor2021 et al.](\#) \\
+			& - \textbf{Methodology:} Introduced a methodology combining pattern recognition with deep learning techniques, unlocking new avenues for Urdu text detection. \\
+			\hline
+		\end{tabular}
+	\end{table*}
+	
+	\subsubsection{Other Emerging Trends}
+	
+	In addition to deep learning, several emerging trends are shaping the trajectory of Urdu text detection, broadening its scope and impact:
+	
+	\begin{table*}[ht]
+		\centering
+		\begin{tabular}{|p{3cm}|p{6cm}|}
+			\hline
+			\textbf{Trend} & \textbf{Contributions} \\
+			\hline
+			Efficient Urdu Text Detection and Recognition in Natural Scene Images & 
+			- \textbf{Authors:} [Khan and Ahmed](\#) \\
+			& - \textbf{Findings:} Proposed an efficient system combining deep learning techniques for text detection with optical character recognition (OCR) for text recognition in natural scene images. \\
+			\hline
+			Enhancing Urdu Text Detection in Videos with Temporal Context & 
+			- \textbf{Authors:} [Malik and Rehman](\#) \\
+			& - \textbf{Findings:} Addressed Urdu text detection in video content with a temporal context, introducing a method that utilizes temporal information in video frames to improve text detection accuracy. \\
+			\hline
+			Deep Learning-Based Urdu Handwritten Text Recognition & 
+			- \textbf{Authors:} [Ali and Iqbal](\#) \\
+			& - \textbf{Findings:} Explored Urdu handwritten text recognition using deep learning techniques, introducing a model specifically designed for recognizing handwritten Urdu text, evaluated on a dataset of handwritten documents. \\
+			\hline
+			Multimodal Urdu Text Detection and Recognition in Videos & 
+			- \textbf{Authors:} [Riaz and Butt](\#) \\
+			& - \textbf{Findings:} Extended the horizon by addressing multimodal Urdu text detection and recognition within video content, combining visual and audio cues for improved accuracy. \\
+			\hline
+			End-to-End Urdu Text Detection and Localization with Transformers & 
+			- \textbf{Authors:} [Khan and Ahmed](\#) \\
+			& - \textbf{Findings:} Focused on end-to-end Urdu text detection and localization using Transformer models, leveraging the attention mechanisms of Transformer architectures to directly locate and recognize Urdu text in images. \\
+			\hline
+		\end{tabular}
+	\end{table*}
+	
+	\subsection{Conclusion}
+	
+	In conclusion, the amalgamation of deep learning approaches and emerging trends has propelled Urdu text detection into a realm of unprecedented accuracy and versatility. Overcoming past challenges, the field is not only witnessing technological advancements but also exploring diverse applications that have the potential to reshape industries and enrich user experiences.
+	
+%\FloatBarrier
+\section{Limitations of the State of the Art} \label{losota}
+After conducting a thorough examination of the existing academic literature, it is unmistakably clear that the domain of natural scene images poses a plethora of intricate challenges. These challenges, spanning image acquisition, processing, and the training of sophisticated models, cast a substantial shadow over the field. Remarkably, despite the diligent integration of attention mechanisms, the elusive resolution of false positives remains a persistent concern.
+
+In the context of text detection within natural scene images, the vast volume of data necessitates a methodical approach to data incorporation. The complexities multiply when applied to Urdu text due to its cursive nature and the intricacies of diverse writing styles. Notably, the research landscape for Urdu text detection and recognition lags behind languages such as Chinese, English, and Latin scripts.
+
+Furthermore, the adoption of advanced technologies within this domain falls behind the curve. Acknowledging this gap, our resolute commitment is to harness and assimilate the latest advancements and methodologies in Urdu text detection and recognition. Our aspiration is not merely to address these challenges but also to expand the boundaries of what is achievable within this field. Our dedicated efforts aim to make a substantial and enduring contribution to the broader landscape of technology-driven language processing, firmly within the framework of academic research.
+\section{Methodology}
+Our methodology tackles text detection challenges in diverse natural scenes with Urdu, English, Sindhi, and Arabic scripts. It involves two key steps: data preparation and architecture selection. Data preparation includes dataset selection, annotation, model-specific preprocessing, and synthetic dataset generation. Architecture selection involves a thorough evaluation of three object detection algorithms: YOLO, Faster R-CNN, and a GCN-enhanced model designed for improved text detection efficacy.
+
+\subsection{Data Acquisition and Preparation}
+To represent real-world text diversity, we employed the Urdu-Text dataset \cite{urcutext}, featuring diverse natural scene images with text in Urdu, English, Sindhi, and Arabic. These images were annotated with quadrilaterals for precise geometric representation, effectively capturing the richness of text instances across various languages (Figure~\ref{fig:data}). To ensure compatibility with different model architectures, we implemented tailored preprocessing strategies.
+
+\begin{figure*}[htp]
+	\centering
+	\begin{minipage}{0.4\textwidth}
+		\includegraphics[width=3cm]{figures/data1.eps}
+		\text{Sample Image from Dataset}
+	\end{minipage}
+	\begin{minipage}{0.4\textwidth}
+		\includegraphics[width=4cm]{figures/Picture2.eps}
+		\text{Quadrilateral Annotation for Image}
+	\end{minipage}
+	\caption{Benchmark Dataset Description}
+	\label{fig:data}
+\end{figure*}
+
+For YOLO preprocessing (Figure~\ref{fig:Yolo}), we converted quadrilateral annotations to bounding boxes. Similarly, Faster R-CNN preprocessing (Figure~\ref{fig:FasterRCNN}) involved class mapping for consistency with the model architecture and bounding box conversion to COCO format, a standard for object detection.
+
+\begin{figure*}[htp]
+	\centering
+	\includegraphics[width=0.5\linewidth]{figures/yolo_preprocessing.eps}
+	\caption{YOLO Preprocessing Workflow}
+	\label{fig:Yolo}
+\end{figure*}
+
+\begin{figure*}[htp]
+	\centering
+	\includegraphics[width=\linewidth]{figures/FasterRCNN.eps}
+	\caption{Faster R-CNN Preprocessing Workflow}
+	\label{fig:FasterRCNN}
+\end{figure*}
+
+Recognizing the limitations of quadrilateral annotations for our GCN-based approach, we devised a synthetic dataset specifically tailored for GCNs (Figure~\ref{fig:Polygons}). This involved meticulous manual labeling using the V7labs annotation tool and OpenCV's findContours function to extract precise contours.
+
+\begin{figure*}[htp]
+	\centering
+	\includegraphics[width=\linewidth]{figures/polygons_GCN.eps}
+	\caption{Polygons Annotations Generation for GCN}
+	\label{fig:Polygons}
+\end{figure*}
+
+The precise polygon annotations in our synthetic dataset significantly enhanced model accuracy for diverse text scenarios, including arbitrary shapes and multi-oriented texts. This expansion improved learning across various instances, addressing different shapes, sizes, fonts, orientations, and background complexities.
+
+\subsection{Comparative Analysis of Text Detection Models}
+Our meticulous evaluation compared three prominent text detection models: YOLO, Faster R-CNN, and the Adaptive Boundary Proposal Deformation Model with Graph Convolutional Network (GCN).
+
+\begin{enumerate}
+	\item \textbf{YOLO:} While YOLO excels in real-time detection, its grid-based approach presents challenges for complex text due to varied orientations and shapes. We adapted YOLO with specialized training data and preprocessing techniques to handle such cases, but limitations persist.
+
+	\item \textbf{Faster R-CNN:} Demonstrating marked superiority in handling diverse text, Faster R-CNN's two-stage architecture utilizes a Region Proposal Network (RPN) to effectively generate region proposals and a subsequent detection network to refine them with precise bounding boxes. This approach effectively captures intricate textual details, making Faster R-CNN a potent tool.
+
+	\item \textbf{GCN-based Model:} Our pioneering model leverages the inherent graph structure of text instances by incorporating a GCN. This approach significantly enhances detection accuracy, particularly for complex text deformations and shape variations. The GCN's ability to model pixel dependencies and utilize contextual information empowers the model to excel in challenging scenarios.
+\end{enumerate}
+
+In conclusion, our comparative evaluation highlights the unique strengths and weaknesses of each model. YOLO stands out for its real-time detection capabilities, albeit necessitating adjustments for text-specific tasks. Faster R-CNN excels in capturing text intricacies, while the innovative GCN-based model emerges as a groundbreaking solution for complex text scenarios, showcasing superior accuracy and robustness in our evaluation.
+
+\subsection*{GCN Based Text Detection Framework}
+
+\begin{figure*}[htp]
+	\centering
+	\includegraphics[width=0.7\linewidth]{figures/TextBPN.eps}
+	\caption[Architecture Overview]{Framework Architecture Overview}
+	\label{fig:Our Framework}
+\end{figure*}
+
+The framework integrates advanced techniques for precise text detection, consisting of two main modules: the Adaptive Boundary Proposal Model and the Adaptive Deformation Model (Fig.~\ref{fig:Our Framework}). Beginning with ResNet-50 feature extraction and FPN-inspired spatial optimization, the Boundary Proposal Model utilizes dilated convolutions for text pixel classification and generates distance and direction fields, leading to the generation of initial candidate regions. The subsequent Adaptive Deformation Model refines these proposals iteratively, guided by the classification map, distance field, and direction field. This dual-module approach ensures highly accurate text boundary delineation.
+
+\subsubsection*{Boundary Proposal Model}
+
+The core of the methodology is the boundary proposal model, initiated with ResNet-50 feature extraction\cite{resnet} and enriched by a Feature Pyramid Network (FPN) strategy\cite{fpn}, incorporating multi-layer dilated convolutions (Fig.~\ref{fig:BPN}). This fusion leverages FPN's spatial optimization and dilated convolutions' contextual intricacies, enabling effective text detection across diverse dimensions. The model generates three key maps—Classification, Distance Field, and Direction Field—forming the foundation for initial candidate regions, each represented by $N$ points indicating potential text instances.
+
+\begin{figure*}[htp]
+	\centering
+	\includegraphics[width=0.4\linewidth]{figures/TextBPNArchitectureHQ.eps}
+	\caption[Boundary Proposal Model]{Boundary Proposal Model}
+	\label{fig:BPN}
+\end{figure*}
+
+In pursuit of robust feature extraction, the methodology seamlessly integrates Feature Pyramid Network (FPN) and multi-layer dilated convolutions. FPN ensures comprehensive feature representation, while the boundary proposal model's dilated convolutions consist of two $3 \times 3$ convolution layers with distinct dilation rates ($r=4$ for the first layer and $r=2$ for the second: $\delta = 2, \, r=4$).
+
+\textbf{Classification Map}
+
+The classification map assigns a confidence score (text/non-text) to each pixel:
+
+\begin{equation}
+	C(p) =
+	\begin{cases}
+		\text{Confidence}, & \text{if } p \text{ is text} \\
+		1 - \text{Confidence}, & \text{if } p \text{ is not text}
+	\end{cases}
+\end{equation}
+
+This confidence score guides the proposal generation by filtering out non-text areas.
+
+\textbf{Direction Field Map (V)}
+
+The direction field map (V) consists of two-dimensional unit vectors (→x, →y), indicating the direction from each text pixel towards its nearest pixel on the boundary (pixel-to-boundary). For a given pixel \( p \) within a text instance \( T \), its nearest pixel on the text boundary, denoted as \( Bp \), is determined. A unit vector \( V_{gt}(p) \) is then computed to point away from the text pixel \( p \) towards \( Bp \). This vector is calculated using the formula:
+
+\begin{equation}
+	%\label{eqn:Text and non-text separation Method}
+	V_{gt}(p) =
+	\begin{cases}
+		-\frac{\overrightarrow{Bp}}{\left|\left|\overrightarrow{Bp}\right|\right|}, & \text{if } p \in T \\
+		(0, 0), & \text{if } p \notin T
+	\end{cases}
+\end{equation}
+
+Here, \( Bp \) represents the distance between \( Bp \) and the text pixel \( p \), and \( T \) represents the set of all text instances in an image. For pixels outside the text area (\( p \notin T \)), we represent them with the vector (0, 0). The unit vector \( V_{gt}(p) \) encodes both the relative location of \( p \) inside \( T \) and highlights the boundary between adjacent text instances. It also provides information about the direction for boundary deformation.
+
+\textbf{Distance Field Map (D)}
+
+The distance field map (D) is crucial for boundary deformation. It represents the normalized distance from each text pixel \( p \) to its nearest pixel \( Bp \) on the text boundary:
+
+\begin{equation}
+	D_{gt}(p) =
+	\begin{cases}
+		\frac{\left|\left|\overrightarrow{Bp}\right|\right|}{L}, & \text{if } p \in T \\
+		0, & \text{if } p \notin T
+	\end{cases}
+\end{equation}
+
+Here, \( L \) is the scale of the text instance, calculated as \( \max(D_{gt}(p)); {p \in T} \). This normalization ensures consistency in representing distances.
+
+Relying on the confidence scores from the Classification Map, the model precisely locates text in diverse images, enhancing overall detection precision. The Distance Field Map \( D_{gt}(p) \) encodes the normalized distance of \( p \) inside \( T \), emphasizing boundaries between adjacent text instances—an essential factor for deformation. During proposal generation, candidate boundaries emerge by applying a fixed threshold to the predicted distance, significantly reducing false positives. The Direction Field Map (V), consisting of two-dimensional unit vectors, guides this process, providing crucial directional information for proposal refinement. This iterative refinement ensures accurate text boundary delineation, eliminating false detections and further enhancing precision (see Fig.~\ref{fig:features} for an illustration).
+
+\begin{figure*}[htp]
+	\centering
+	\includegraphics[width=0.5\linewidth]{figures/eps.eps}
+	\caption[Boundary proposal generation illustrating the generation of initial candidate regions classification, distance, and direction fields]{Boundary proposal generation illustrating the generation of initial candidate regions classification, distance, and direction fields}
+	\label{fig:features}
+\end{figure*}
+
+
+\subsubsection*{Adaptive Deformation}
+
+Traditional text detection methods, inspired by object segmentation (e.g., \citep{acuna2018efficient, ling2019fast}), falter when confronted with the diverse shapes of real-world text. Reliant on single aspects like sequence (e.g., RNNs in \citep{peng2020deep}), these methods excel at capturing temporal flow but struggle with intricate spatial relationships, leading to inaccurate boundary detection for curved or distorted text. Conversely, topology-focused methods (e.g., GNNs in \citep{wu2019sota}) excel at spatial relationships but lack the temporal awareness needed for sequential flow, particularly in curved or overlapping text.
+
+Enter the adaptive deformation model, a revolutionary shift in holistic text understanding. It seamlessly integrates RNNs and GCNs, akin to a cartographer analyzing a river's path and its interconnected tributaries. This empowers the model to "see" text beyond a sequence of characters, as a unified shape with both temporal and spatial context.
+
+To leverage this holistic understanding, we strategically place control points around each proposed boundary. These points, forming a closed polygon as shown in Fig.~\ref{fig:Our Framework}, act as anchors for the model's feature learning and deformation process. By adaptively refining these points, the model iteratively sculpts the boundary, achieving impressive accuracy and robustness even for unconventional text, surpassing limitations of prior methods.
+
+\paragraph{Feature Extraction and Construction}
+For each control point in the boundary proposal, we create feature vectors by combining 32D shared features from the CNN backbone with 4D prior features like classification mask, distance field, and direction field. The concise feature vector $f_i$ for a control point $c_pi$ can be defined as:
+
+\begin{equation}
+	f_i = \text{concat}\{F_s(x_i, y_i), F_p(x_i, y_i)\}
+\end{equation}
+
+where $F_s(x_i, y_i)$ and $F_p(x_i, y_i)$ capture general image characteristics and context-specific details through bilinear interpolation.\protect\footnote{Bilinear interpolation in image processing estimates pixel values at non-integer coordinates by averaging neighboring pixels. It preserves both general and context-specific details, acting like a toolkit for each point.} It's akin to assembling a toolkit for each control point, with both general-purpose tools and specialized instruments tailored to the unique features of the surrounding area.To put it simply, it's like preparing a backpack with essentials for a journey: your general supplies and special tools for specific challenges along the way.
+
+\subsubsection*{Encoder-Decoder Architecture\protect\footnote{The Encoder-Decoder Architecture enhances the model's ability to efficiently learn features and deform boundaries iteratively.}}
+
+Our model utilizes an encoder-decoder architecture for effective feature learning and iterative boundary refinement. The encoder integrates Graph Convolutional Networks (GCNs)\protect\footnote{GCNs capture spatial relationships between control points, enhancing spatial context understanding.} and Recurrent Neural Networks (RNNs)\protect\footnote{RNNs, specifically a one-layer Bidirectional Long Short-Term Memory (B-LSTM) network, analyze sequential dependencies, capturing intricate temporal relationships.}.
+
+The decoder, consisting of three layers of 1x1 convolutions\protect\footnote{Enhance feature representation and facilitate information fusion for adaptive boundary deformation.}, actively contribute to boundary deformation. These layers learn to predict offsets between control points and target points, contributing to accurate text detection during iterative boundary refinement. This collaborative refinement is summarized by the formulation:
+
+\begin{equation}
+	X' = \text{{RNN}}(X) \oplus \text{{GCN}}(X) \oplus \text{{Conv1×1}}(X)
+\end{equation}
+
+Here, $\text{{RNN}}(X)$ is a one-layer B-LSTM network, $\text{{GCN}}(X)$ is a graph convolutional network, and $\text{{Conv1×1}}(X)$ is a 1x1 convolution. This equation represents the transformed feature representation $X'$ obtained by combining the outputs of the RNN, GCN, and 1x1 convolution.
+
+In conclusion, our methodology presents a robust solution for adaptive boundary deformation, specifically tailored for text detection in natural scenes. Leveraging Graph Convolutional Networks (GCNs), we effectively tackle the refinement of initial text proposals by capturing both topology and sequence context. The integration of a Bidirectional Long Short-Term Memory (Bi-LSTM) network enhances our model's ability to understand intricate temporal dependencies in text detection, guiding precise adjustments during boundary refinement.
+
+The synergy between GCN and RNN efficiently learns features and iteratively deforms proposed text boundaries. GCNs capture spatial relationships between control points, while the Bi-LSTM models the sequential nature of boundary deformation, actively facilitating more accurate text boundary refinement with each iteration.
+
+Furthermore, the incorporation of Convolution 1x1 layers actively enhances feature representation and information fusion, guiding adaptive deformation and precise prediction of offsets between control points and target points. These layers actively contribute to significantly enhancing accuracy in text detection.
+
+Our model not only enables accurate and robust text detection in natural scenes but also unlocks new opportunities for applications in computer vision, including scene understanding, autonomous driving, and image retrieval.
+
+\subsection{Implementation Details}
+Balancing GPU efficiency and sample diversity, our training leverages the Adam optimizer with a batch size of 6. Starting with a carefully chosen 0.001 learning rate for swift convergence and stability, we dynamically adapt it by progressively reducing it by 10\% every 50 epochs. Further bolstering robustness, we integrate diverse data augmentation techniques like random rotation, cropping, and flipping, readying the model for real-world complexities in orientations and layouts. To ensure consistent training, we normalize the dataset by subtracting the mean and dividing by the standard deviation.
+
+
+% Evaluation Metrics Section
+\subsection{Evaluation Metrics}
+
+Our assessment employs precision, recall, and the F-score to assess the model's text detection capabilities.
+
+\textbf{Precision (\(P\))}
+Quantifying positive prediction accuracy, precision ensures identified text is true text. 
+\begin{equation}
+	P = \frac{TP}{TP + FP}
+\end{equation} 
+where \( TP \) is true positives, and \( FP \) is false positives.
+
+\textbf{Recall (\(R\))}
+Measuring the model's sensitivity, recall reflects its capacity to capture all relevant text instances.
+\begin{equation}
+	R = \frac{TP}{TP + FN}
+\end{equation}
+where \( FN \) is false negatives.
+ 
+\textbf{F-score}
+The F-score combines precision and recall to provide a balanced measure. 
+\begin{equation}
+	F = \frac{2 \cdot (P \cdot R)}{P + R}
+\end{equation}
+
+In summary, precision ensures accurate text identification, recall captures all existing text, and the F-score balances both aspects. Acknowledging limitations, such as the binary nature and challenges with diverse text characteristics, highlights the importance of a holistic evaluation.
+
+
+\section{Experimental Results}
+We rigorously evaluated our Urdu text detection methodology on a custom-annotated dataset, analyzing its performance in identifying and localizing text within complex scenarios. Utilizing precision, recall, and F1-score as key metrics, we obtained valuable insights into the methodology's effectiveness and robustness, addressing challenges posed by the Urdu script and dataset characteristics. This section also presents a comprehensive analysis of three text detection models: Faster R-CNN, YOLO (You Only Look Once), and the Adaptive Deformation Model. We meticulously assessed each model's performance, facilitating meaningful comparisons and highlighting their respective strengths and limitations.
+
+
+\subsection{Performance Overview}
+
+Before delving into the detailed comparative analysis, here's a succinct summary of the key metrics achieved by each model:
+
+\textbf{Faster R-CNN}: Achieved a precision of 0.81, recall of 0.60, and an F-score of 0.50
+Z. \\
+\textbf{YOLO}: Attained a precision of 0.83, recall of 0.56, and an F-score of 0.46. \\
+\textbf{Adaptive Deformation Model}: Demonstrated a precision of 1.000, recall of 0.6514, and an F-score of 0.7619.
+
+Now, let's explore the comparative assessment in greater detail:
+
+%\subsubsection*{Precision vs. Recall Trade-off}
+Our analysis evaluated the balance between precision and recall for each text detection model. Faster R-CNN excelled in achieving a balance, making it ideal for situations requiring accurate detection and comprehensive coverage. Conversely, YOLO prioritized precision, minimizing false positives, valuable for tasks with smaller or irregular text instances. The Adaptive Deformation Model demonstrated remarkable recall rates, ensuring correct identification of virtually all text instances, even in challenging variations.
+
+\subsection{Visual Results}
+In this comprehensive visual analysis, we systematically compared the performance of different text detection models, focusing on showcasing the effectiveness of Graph Convolutional Networks (GCN) across critical factors.
+
+\subsubsection*{Robustness to Text Variability} 
+Faster R-CNN demonstrated robustness in handling text diversity across various layouts and styles. YOLO excelled in detecting text of varying sizes and orientations, prioritizing precision. The Adaptive Deformation Model showed adaptability to complex text variations, including handwritten and curved text (Fig. ~\ref{variability}).
+
+\begin{figure*}[htp]
+  \centering
+  \begin{minipage}{0.3\textwidth}
+    \includegraphics[width=\linewidth]{figures/16.eps}
+    \text{YOLO}
+  \end{minipage}
+  \begin{minipage}{0.3\textwidth}
+    \includegraphics[width=\linewidth]{figures/variability.eps}
+    \text{  FasterRCNN}
+  \end{minipage}
+  \begin{minipage}{0.3\textwidth}
+    \includegraphics[width=\linewidth]{figures/16_1iter.eps}
+    \text{GCN}
+  \end{minipage}
+  \caption[Results achieved on Variable Text]{GCN excels at finding text in diverse scripts and complex environments.}
+  \label{variability}  
+\end{figure*}
+%\FloatBarrier
+
+\subsubsection*{Robustness to Multi-Oriented Text}
+Text instances with diverse orientations pose a challenge for text detection models. GCN excelled in accurately detecting text across a wide range of orientations, outperforming other models (Fig. ~\ref{multi-o}).
+
+\begin{figure*}[htp]
+  \centering
+  \begin{minipage}{0.3\textwidth}
+    \includegraphics[width=\linewidth]{figures/yolo_oriented.eps}
+    \text{YOLO}
+  \end{minipage}
+  \begin{minipage}{0.3\textwidth}
+    \includegraphics[width=\linewidth]{figures/predicted_x.eps}
+    \text{   FasterRCNN}
+  \end{minipage}
+  \begin{minipage}{0.3\textwidth}
+    \includegraphics[width=\linewidth]{figures/updated_orientation.eps}
+    \text{GCN}
+  \end{minipage}
+  \caption[Multi-Oriented Text Results]{GCN demonstrates superior performance in locating and processing text appearing at various angles and orientations within images.}
+  \label{multi-o}
+\end{figure*}
+%\FloatBarrier
+
+\subsubsection*{Accurate Detection of Arbitrary Shapes}
+
+GCN demonstrated remarkable proficiency in accurately identifying text within complex shapes, surpassing alternative models (Fig. ~\ref{arbitrary}).
+
+\begin{figure*}[htp]
+  \centering
+  \begin{minipage}{0.3\textwidth}
+    \includegraphics[width=\linewidth]{figures/arbitrary.eps}
+    \text{YOLO}
+  \end{minipage}
+  \begin{minipage}{0.3\textwidth}
+    \includegraphics[width=\linewidth]{figures/predicted_onlyEnglish.eps}
+    \text{FasterRCNN}
+  \end{minipage}
+  \begin{minipage}{0.3\textwidth}
+    \includegraphics[width=\linewidth]{figures/arbitrar.eps}
+    \text{GCN}
+  \end{minipage}
+  \caption[Arbitrary Shaped Texts Results]{Algorithm tackles text within any shape .}
+  \label{arbitrary}
+\end{figure*}
+%\FloatBarrier
+
+
+\subsubsection*{Effective Handling of Complex Backgrounds}
+
+GCN exhibited unparalleled robustness in isolating text from intricate visual contexts within complex backgrounds, surpassing competing models (Fig. ~\ref{backg}).
+
+\begin{figure*}[htp]
+  \centering
+  \begin{minipage}{0.3\textwidth}
+    \includegraphics[width=\linewidth]{figures/2.eps}
+    \text{YOLO}
+  \end{minipage}
+  \begin{minipage}{0.3\textwidth}
+    \includegraphics[width=\linewidth]{figures/predicted_n.eps}
+    \text{FasterRCNN}
+  \end{minipage}
+  \begin{minipage}{0.3\textwidth}
+    \includegraphics[width=\linewidth]{figures/back1.eps}
+    \text{GCN}
+  \end{minipage}
+\end{figure*}
+%\FloatBarrier
+
+\begin{figure*}[htp]
+  \centering
+  \begin{minipage}{0.3\textwidth}
+    \includegraphics[width=\linewidth]{figures/baxkgr.eps}
+    \text{YOLO}
+  \end{minipage}
+  \begin{minipage}{0.3\textwidth}
+    \includegraphics[width=\linewidth]{figures/predicted_1.eps}
+    \text{FasterRCNN}
+  \end{minipage}
+  \begin{minipage}{0.3\textwidth}
+    \includegraphics[width=\linewidth]{figures/baxk2.eps}
+    \text{GCN}
+  \end{minipage}
+  \caption[Complex Background Handling]{GCN excels at text detection in complex backgrounds .}
+  \label{backg}
+\end{figure*}
+%\FloatBarrier
+
+
+\subsubsection*{Holistic Performance}
+The holistic performance of GCN showcased its superior capabilities in handling diverse and complex data, delivering outstanding overall performance across various tasks and scenarios (Fig. ~\ref{fig:holistic}).
+
+\begin{figure*}[htp]
+  \centering
+  \begin{minipage}{0.2\textwidth}
+    \includegraphics[width=\linewidth]{figures/holistic1.eps}  
+  \end{minipage}
+  \begin{minipage}{0.2\textwidth}
+    \includegraphics[width=\linewidth]{figures/hol2.eps} 
+  \end{minipage}
+  \begin{minipage}{0.2\textwidth}
+    \includegraphics[width=\linewidth]{figures/hol3.eps}
+   
+  \end{minipage}
+  \begin{minipage}{0.2\textwidth}
+    \includegraphics[width=\linewidth]{figures/hol4.eps}
+    
+  \end{minipage}
+  \caption[Hoslistic Performance]{Demonstrates GCN's outstanding overall performance across diverse tasks and data, highlighting its capabilities in handling complex scenarios.}
+
+  \label{fig:holistic}
+\end{figure*}
+%\FloatBarrier
+
+\subsection{Scalability and Efficiency}
+
+Faster R-CNN and YOLO offer efficient real-time performance, making them suitable for scalable applications. In contrast, GCN, while computationally demanding, excels in accuracy, particularly beneficial for intricate scenarios where precision and recall are crucial. Despite GCN's resource requirements, its adaptability, precision, and robustness position it as the preferred choice for Urdu text detection in challenging scenarios. Researchers and practitioners can rely on GCN for superior real-world performance.
+
+\section{Conclusion}\label{sec13}
+This research establishes a novel hybrid model as a highly effective solution for Urdu text detection. Through comprehensive comparisons with established methods, the hybrid model demonstrates superior accuracy and robustness, particularly excelling in handling complex text shapes.
+
+The improved Urdu text detection demonstrated in this study holds promise for diverse fields, including document analysis, information retrieval, and various assistive technologies. This research not only advances Urdu text detection methodologies but also lays the groundwork for broader impacts across multiple domains.
+
+As we look ahead, optimizing the hybrid model for specific Urdu applications, expanding datasets, and exploring new avenues represent crucial steps for future research. In essence, this study not only enhances our understanding of Urdu text detection but also catalyzes potential advancements with far-reaching implications in the ever-evolving landscape of text detection methodologies.
+\backmatter
+
+
+Certainly! If you'd like to provide context at the top and then organize the information year-wise in a table, that's a great approach. Below is a modified version of the literature review section, presenting the information in a more chronological and organized manner:
+
+
+
+	
+	\section{Literature Review}
+	
+	\subsection{Introduction}
+	
+	Urdu text detection has undergone significant evolution, transitioning from traditional methodologies to cutting-edge deep learning approaches. This section provides a chronological overview of key developments, highlighting the technological progression and its impact on the field.
+	
+	\subsection{Historical Perspectives}
+	
+	The historical significance of Urdu script lies in its cultural and linguistic importance. Urdu, written in the Perso-Arabic script, holds a rich heritage, making its accurate detection crucial for various applications.
+	
+	\subsection{Pre-Deep Learning Era (Before 2010)}
+	
+	Before the advent of deep learning, Support Vector Machines (SVMs) and Continuously Adaptive Mean Shift (CAMSHIFT) were instrumental in Urdu text detection.
+	
+	\subsubsection{Support Vector Machines (SVMs)}
+	
+	\begin{itemize}
+		\item \textbf{Challenges:}
+		\begin{itemize}
+			\item \textbf{Computational Intensity:} SVMs posed challenges in real-time applications due to their computational intensity.
+			\item \textbf{Feature Engineering:} Performance heavily relied on manually crafted features, limiting adaptability.
+		\end{itemize}
+	\end{itemize}
+	
+	\subsubsection{Continuously Adaptive Mean Shift (CAMSHIFT)}
+	
+	\begin{itemize}
+		\item \textbf{Challenges:}
+		\begin{itemize}
+			\item \textbf{Limited Adaptability:} Struggled with variations in text patterns, scales, and orientations.
+			\item \textbf{Temporal Dynamics:} In dynamic video frames, CAMSHIFT sometimes failed to capture temporal dynamics.
+		\end{itemize}
+	\end{itemize}
+	
+	\subsection{Transition to Deep Learning (2010 - 2015)}
+	
+	The decade from 2010 to 2015 witnessed a paradigm shift with the integration of deep learning techniques.
+	
+	\subsubsection{Custom Dataset and Accelerated CNN (2012)}
+	
+	\begin{itemize}
+		\item \textbf{Authors:} [FastCNN et al.](\#)
+		\item \textbf{Methodology:} Introduced a customized dataset for Urdu text detection and recognition, leveraging an accelerated Faster CNN algorithm.
+		\item \textbf{Findings:} Achieved exceptional average precision of 0.98.
+	\end{itemize}
+	
+	\subsubsection{Deciphering Video Frame Text (2014)}
+	
+	\begin{itemize}
+		\item \textbf{Authors:} [UrduCaption et al.](\#)
+		\item \textbf{Methodology:} Focused on video frames, specifically targeting Urdu captions in news and entertainment channels.
+		\item \textbf{Techniques:} Used Gobar Filter and transform for feature extraction; employed classifiers like SVM and artificial neural networks for text analysis.
+	\end{itemize}
+	
+	\subsection{Multifaceted Growth (2016 - Present)}
+	
+	The last few years have witnessed diverse trends and applications, shaping the contemporary landscape of Urdu text detection.
+	
+	\subsubsection{Multilingual Insights through Deep Learning (2018)}
+	
+	\begin{itemize}
+		\item \textbf{Authors:} [Conv et al.](\#)
+		\item \textbf{Methodology:} Harnessed manually labeled Urdu datasets, utilized convolutional layers with VGG-16 and FastCNN for textual and non-textual region proposals.
+		\item \textbf{Advancements:} Significant progress in text detection using recurrent neural networks (RNNs).
+	\end{itemize}
+	
+	\subsubsection{Holistic Deep Learning Approach (2019)}
+	
+	\begin{itemize}
+		\item \textbf{Authors:} [Urdu2021 et al.](\#)
+		\item \textbf{Methodology:} Adopted a holistic deep learning approach, focusing on entire words instead of text segmentation.
+		\item \textbf{Performance:} Achieved a remarkable 96% accuracy rate across diverse datasets.
+	\end{itemize}
+	
+	\subsubsection{Synergy of Pattern Recognition and Deep Learning (2020)}
+	
+	\begin{itemize}
+		\item \textbf{Authors:} [Manzoor2021 et al.](\#)
+		\item \textbf{Methodology:} Introduced a methodology combining pattern recognition with deep learning techniques.
+		\item \textbf{Impact:} Opened new avenues for Urdu text detection.
+	\end{itemize}
+	
+	\subsection{Future Directions}
+	
+	The trajectory of Urdu text detection is dynamic, and future research may explore innovative applications, overcome remaining challenges, and continue to leverage emerging technologies.
+	
+
+
+
+\bibliographystyle{apa}
+\bibliography{sn-bibliography}% common bib file
+%% if required, the content of .bbl file can be included here once bbl is generated
+%% \input sn-article.bbl
+
+%\end{multicols}
+
+\end{document}

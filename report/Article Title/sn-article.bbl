@@ -1,0 +1,77 @@
+\begin{thebibliography}{}
+
+\bibitem[\protect\astroncite{Abbott et~al.}{2019}]{bib13}
+Abbott, T. M.~C. et~al. (2019).
+\newblock {Dark Energy Survey Year 1 Results: Constraints on Extended
+  Cosmological Models from Galaxy Clustering and Weak Lensing}.
+\newblock {\em Phys. Rev. D}, 99(12):123505.
+
+\bibitem[\protect\astroncite{Babichev et~al.}{2002}]{bib10}
+Babichev, S.~A., Ries, J., and Lvovsky, A.~I. (2002).
+\newblock Quantum scissors: teleportation of single-mode optical states by
+  means of a nonlocal single photon.
+\newblock Preprint at \url{https://arxiv.org/abs/quant-ph/0208066v1}.
+
+\bibitem[\protect\astroncite{Beneke et~al.}{1997}]{bib11}
+Beneke, M., Buchalla, G., and Dunietz, I. (1997).
+\newblock Mixing induced {CP} asymmetries in inclusive {B} decays.
+\newblock {\em Phys. {L}ett.}, B393:132--142.
+
+\bibitem[\protect\astroncite{Broy}{1992}]{bib5}
+Broy, M. (1992).
+\newblock Software engineering---from auxiliary to key technologies.
+\newblock In Broy, M. and Denert, E., editors, {\em Software Pioneers}, pages
+  10--13. Springer, New {Y}ork.
+
+\bibitem[\protect\astroncite{Campbell and Gear}{1995}]{bib1}
+Campbell, S.~L. and Gear, C.~W. (1995).
+\newblock The index of general nonlinear {D}{A}{E}{S}.
+\newblock {\em Numer. {M}ath.}, 72(2):173--196.
+
+\bibitem[\protect\astroncite{Chung and Morris}{1978}]{bib8}
+Chung, S.~T. and Morris, R.~L. (1978).
+\newblock Isolation and characterization of plasmid deoxyribonucleic acid from
+  streptomyces fradiae.
+\newblock Paper presented at the 3rd international symposium on the genetics of
+  industrial microorganisms, University of {W}isconsin, {M}adison, 4--9 June
+  1978.
+
+\bibitem[\protect\astroncite{Geddes et~al.}{1992}]{bib4}
+Geddes, K.~O., Czapor, S.~R., and Labahn, G. (1992).
+\newblock {\em Algorithms for {C}omputer {A}lgebra}.
+\newblock Kluwer, Boston.
+
+\bibitem[\protect\astroncite{Hamburger}{1995}]{bib3}
+Hamburger, C. (1995).
+\newblock Quasimonotonicity, regularity and duality for nonlinear systems of
+  partial differential equations.
+\newblock {\em Ann. Mat. Pura. Appl.}, 169(2):321--354.
+
+\bibitem[\protect\astroncite{Hao et~al.}{2014}]{bib9}
+Hao, Z., AghaKouchak, A., Nakhjiri, N., and Farahmand, A. (2014).
+\newblock Global integrated drought monitoring and prediction system (gidmaps)
+  data sets.
+\newblock figshare \url{https://doi.org/10.6084/m9.figshare.853801}.
+
+\bibitem[\protect\astroncite{Seymour}{1981}]{bib6}
+Seymour, R.~S., editor (1981).
+\newblock {\em Conductive {P}olymers}.
+\newblock Plenum, New {Y}ork.
+
+\bibitem[\protect\astroncite{Slifka and Whitton}{2000}]{bib2}
+Slifka, M.~K. and Whitton, J.~L. (2000).
+\newblock Clinical implications of dysregulated cytokine production.
+\newblock {\em J. {M}ol. {M}ed.}, 78:74--80.
+
+\bibitem[\protect\astroncite{Smith}{1976}]{bib7}
+Smith, S.~E. (1976).
+\newblock Neuromuscular blocking drugs in man.
+\newblock In Zaimis, E., editor, {\em Neuromuscular junction. {H}andbook of
+  experimental pharmacology}, volume~42, pages 593--660, Heidelberg. Springer.
+
+\bibitem[\protect\astroncite{Stahl}{2020}]{bib12}
+Stahl, B. (2020).
+\newblock deep{SIP}: deep learning of {S}upernova {I}a {P}arameters.
+\newblock Astrophysics {S}ource {C}ode {L}ibrary.
+
+\end{thebibliography}

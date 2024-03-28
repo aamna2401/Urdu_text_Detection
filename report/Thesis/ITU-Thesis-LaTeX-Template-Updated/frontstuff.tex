@@ -1,0 +1,152 @@
+%==========================================================
+%======================  FRONT STUFF ======================
+%==========================================================
+
+%======================= Cover Page =======================
+%\begin{document}
+\newpage
+\pagestyle{plain}
+\pagenumbering{roman}
+\setcounter{page}{5} %start of the page numbering, initial 4 pages are to be from Word document
+\addcontentsline{toc}{section}{Title Page}
+%\setlength{\footskip}{-15mm}
+\setlength{\textheight}{230mm}
+\setlength{\voffset}{10mm}
+\vskip -5em
+
+\begin{center}
+{
+ \singlespace \uppercase{\bf Urdu Text Detection In Natural Scene Images} \par
+}
+\vskip 2em
+{
+ \lineskip 1.5em
+  \begin{tabular}[t]{c} by\\ \\ Aamna Khan
+  \end{tabular}\par
+}
+\vskip 5.6em
+
+\vskip 3.5em
+\singlespace A [thesis $\mid$ dissertation] submitted in partial fulfillment of the
+requirements for the\\ degree of [Master of PHILOSOPHY ] in\\
+Data Science
+
+	\vskip 5em
+\vskip 0.5em
+{
+  \singlespace
+   \begin{center}
+    \begin{tabular}{rl}
+     \\[-1em]
+    Examination Committee: & Dr.\ Hajra Waheed  \\[-0.8em]
+                           & Dr.\ Iqra Safder \#1 \\[-0.8em]
+                           & Ms.\ Mehwish Ghafoor \#2 \\\\
+
+% UNCOMMENT THE LINES BELOW IF YOU HAVE THE EXTERNAL EXAMINER.
+%      External Examiner:     & Prof.\ YOUR EXTERNAL EXAMINER \\[-0.8em]
+%                             & Dept.\ of Electrical and Computer Engineering \\[-0.8em]
+%                             & McGill University, Canada \\\\
+		
+%     Nationality:     & Thai \\[-0.8em]
+%     Previous Degree: & Master of Engineering in Computer Science\\[-0.8em]
+%                      & Asian Institute of Technology, Thailand\\[-0.8em]
+%     \\
+%    Scholarship Donor: & Royal Thai Government\\[-0.8em]
+%     \\
+   \end{tabular}
+ \end{center}
+
+ \vskip 3.0em
+  \centerline{}
+ \vskip 2em
+}
+\end{center}
+\begin{center}
+ \singlespace Information Technology University
+                    \\ Lahore \\ June 2023
+\end{center}
+\vfill
+
+%====================== ACKNOWLEDGEMENTS ======================
+\newpage
+\pagestyle{plain}
+\addcontentsline{toc}{section}{Acknowledgments}
+\onecolumn % Single-column.
+\if@twoside\else\raggedbottom\fi % Ragged bottom unless twoside option.
+\setlength{\footskip}{8mm}
+\begin{center}
+{
+  \large \bf Acknowledgments\\ \vskip 1em
+}
+\vskip 1em
+\end{center}
+\singlespace
+\doublespace
+\hspace{8.5mm}
+\vspace{-1em}
+
+I extend my heartfelt gratitude to both my family and the dedicated teachers who have been integral to my educational journey. From my earliest school days to the completion of my Master's degree, their unwavering support and prayers have been a constant source of strength. I must also express my deep appreciation for my mother and younger sibling, their steadfast support and prayers have been a constant source of strength.
+
+To the late Dr. Saeed Ul Hassan, your kindness, mentorship, and guidance will forever be etched in my memory. Your unwavering belief in me was a driving force in my journey.
+
+I am deeply thankful to my dedicated supervisors, Dr. Iqra and Dr. Hajra, for their invaluable guidance, which has been pivotal in shaping my academic path. Their consistent support, and the relentless encouragement to keep pushing forward, have made this achievement possible.
+
+I would also like to acknowledge Sir Farooq Zaman for his unwavering encouragement and support.
+
+To all those who have played a part in my academic journey, your contributions have been indispensable. Your collective support and guidance have made this achievement possible, and for that, I am truly grateful.
+
+%======================= Table of Contents =========================
+\newpage
+\addcontentsline{toc}{section}{Table of Contents}
+\tableofcontents
+
+% Page 2 begins
+
+%===================== List of Figures ======================
+\newpage
+\addcontentsline{toc}{section}{List of Figures}
+\listoffigures
+
+%\clearpage     % \clearpage ends the page, and also dumps out all floats.
+%\end{document} % Floats are things like tables and figures.
+
+%\clearpage     % \clearpage ends the page, and also dumps out all floats.
+
+% %===================== List of Tables ======================
+\newpage
+\addcontentsline{toc}{section}{List of Tables}
+\listoftables
+
+% %\clearpage     % \clearpage ends the page, and also dumps out all floats.
+% %\end{document} % Floats are things like tables and figures.
+
+%\clearpage     % \clearpage ends the page, and also dumps out all floats.
+\setlength{\parskip}{12pt}
+
+%====================== ABSTRACT ======================
+\newpage
+\pagestyle{plain}
+\addcontentsline{toc}{section}{Abstract}
+\onecolumn % Single-column.
+\if@twoside\else\raggedbottom\fi % Ragged bottom unless twoside option.
+
+\setlength{\footskip}{8mm}
+
+\begin{center}
+{\large \bf Abstract \\ \vskip 1em}
+\vskip 1em
+\end{center}
+\singlespace
+\doublespace
+\hspace{8.5mm}
+\vspace{-1em}
+
+ Our work embarks on a comprehensive exploration of text detection within complex natural scenes, with a focal point on the Urdu language. Urdu, a widely spoken South Asian language, introduces unique complexities due to its cursive script and diverse writing styles. The primary research objectives revolve around developing robust Urdu text detection algorithms, enhancing the detection of multi-oriented and arbitrary-shaped text, and facilitating their integration into real-world applications. The contributions of this work encompass dataset generation to enrich the research landscape and the introduction of an architecture that combines the Boundary Proposal Model and the Adaptive Deformation Model.
+
+The experimental journey involves the evaluation of three models - YOLO, Faster R-CNN, and a two-fold model, the Boundary Proposal and Adaptive Deformation Model. While each model demonstrates substantial text detection capabilities, the Boundary Proposal and Adaptive Deformation Model excels by effectively identifying arbitrary, multi-oriented, and complex-shaped text, even within intricate backgrounds. It extends its scope to embrace the realm of multilingual text detection and encourages cross-domain collaboration to foster innovation in text detection technologies. The imperative driving this work is to bridge technological gaps, advancing text detection to align with the demands of emerging technologies such as autonomous devices. This research opens new horizons for practical applications, including autonomous systems, translation services for cross-cultural interactions, and enhanced text accessibility across diverse scenarios.
+
+
+
+\setlength{\parskip}{0pt}
+
+

@@ -1,0 +1,51 @@
+This is BibTeX, Version 0.99d
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: sn-article.aux
+Reallocating 'name_of_file' (item size: 1) to 4 items.
+The style file: apa.bst
+Reallocating 'name_of_file' (item size: 1) to 16 items.
+Database file #1: sn-bibliography.bib
+Warning--entry type for "bib12" isn't style-file defined
+--line 118 of file sn-bibliography.bib
+You've used 13 entries,
+            1940 wiz_defined-function locations,
+            557 strings with 5637 characters,
+and the built_in function-call counts, 4854 in all, are:
+= -- 483
+> -- 177
+< -- 12
++ -- 57
+- -- 55
+* -- 404
+:= -- 851
+add.period$ -- 41
+call.type$ -- 13
+change.case$ -- 88
+chr.to.int$ -- 13
+cite$ -- 13
+duplicate$ -- 192
+empty$ -- 341
+format.name$ -- 75
+if$ -- 951
+int.to.chr$ -- 1
+int.to.str$ -- 0
+missing$ -- 10
+newline$ -- 68
+num.names$ -- 44
+pop$ -- 70
+preamble$ -- 1
+purify$ -- 90
+quote$ -- 0
+skip$ -- 152
+stack$ -- 0
+substring$ -- 322
+swap$ -- 39
+text.length$ -- 3
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 74
+warning$ -- 0
+while$ -- 42
+width$ -- 0
+write$ -- 172
+(There was 1 warning)

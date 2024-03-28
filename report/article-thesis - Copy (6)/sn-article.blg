@@ -1,0 +1,50 @@
+This is BibTeX, Version 0.99d
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: sn-article.aux
+Reallocating 'name_of_file' (item size: 1) to 4 items.
+The style file: apa.bst
+Reallocating 'name_of_file' (item size: 1) to 16 items.
+Database file #1: sn-bibliography.bib
+Warning--empty booktitle in competetition
+You've used 15 entries,
+            1940 wiz_defined-function locations,
+            556 strings with 6460 characters,
+and the built_in function-call counts, 6475 in all, are:
+= -- 589
+> -- 405
+< -- 3
++ -- 146
+- -- 144
+* -- 603
+:= -- 1176
+add.period$ -- 43
+call.type$ -- 15
+change.case$ -- 147
+chr.to.int$ -- 15
+cite$ -- 16
+duplicate$ -- 208
+empty$ -- 353
+format.name$ -- 163
+if$ -- 1198
+int.to.chr$ -- 1
+int.to.str$ -- 0
+missing$ -- 13
+newline$ -- 76
+num.names$ -- 45
+pop$ -- 140
+preamble$ -- 1
+purify$ -- 147
+quote$ -- 0
+skip$ -- 163
+stack$ -- 0
+substring$ -- 314
+swap$ -- 38
+text.length$ -- 1
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 90
+warning$ -- 1
+while$ -- 39
+width$ -- 0
+write$ -- 182
+(There was 1 warning)

@@ -1,0 +1,75 @@
+\begin{thebibliography}{}
+
+\bibitem[\protect\astroncite{Acuna et~al.}{2018}]{acuna2018efficient}
+Acuna, D., Ling, H., Kar, A., and Fidler, S. (2018).
+\newblock Efficient and robust boundary detection with deep convolutional
+  networks.
+\newblock {\em arXiv preprint arXiv:1803.08807}.
+
+\bibitem[\protect\astroncite{Chowdhury et~al.}{2019}]{urcutext}
+Chowdhury, S.~A., Khan, S., Javed, K., Shafait, F., Shahbaz~Khan, A., Siddiqui,
+  I., and Dengel, A. (2019).
+\newblock Urdu-text: A dataset and benchmark for urdu text detection and
+  recognition in natural scenes.
+\newblock {\em IEEE Transactions on Image Processing}, 28(11):5638--5650.
+
+\bibitem[\protect\astroncite{Gomez and Karatzas}{2009}]{Gomez2009}
+Gomez, L. and Karatzas, D. (2009).
+\newblock Text detection in natural images: A survey.
+\newblock {\em Pattern Recognition}, 42(2):295--310.
+
+\bibitem[\protect\astroncite{Gupta et~al.}{2023}]{Gupta2023}
+Gupta, A., Ahmed, S., Khan, S.~H., and Siddiqi, I. (2023).
+\newblock A novel approach for text detection in natural images with complex
+  backgrounds.
+\newblock {\em arXiv preprint arXiv:2301.04350}.
+
+\bibitem[\protect\astroncite{He et~al.}{2015}]{resnet}
+He, K., Zhang, X., Ren, S., and Sun, J. (2015).
+\newblock Deep residual learning for image recognition.
+
+\bibitem[\protect\astroncite{Jaderberg et~al.}{2014}]{Jaderberg2014}
+Jaderberg, M., Simonyan, K., and Zisserman, A. (2014).
+\newblock Spatial transformer networks.
+\newblock {\em arXiv preprint arXiv:1506.02025}.
+
+\bibitem[\protect\astroncite{Khan et~al.}{2022}]{Khan2022}
+Khan, S.~H., Khan, A., and Siddiqi, I. (2022).
+\newblock Improving urdu text detection with attention-based bidirectional
+  lstms.
+\newblock {\em arXiv preprint arXiv:2208.03395}.
+
+\bibitem[\protect\astroncite{Lin et~al.}{2017}]{fpn}
+Lin, T.-Y., Dollár, P., Girshick, R., He, K., Hariharan, B., and Belongie, S.
+  (2017).
+\newblock Feature pyramid networks for object detection.
+
+\bibitem[\protect\astroncite{Ling et~al.}{2019}]{ling2019fast}
+Ling, H., Kar, A., and Fidler, S. (2019).
+\newblock Fast and accurate online boundary detection via adaptive control
+  points.
+\newblock {\em arXiv preprint arXiv:1901.09556}.
+
+\bibitem[\protect\astroncite{Peng et~al.}{2020}]{peng2020deep}
+Peng, W., Xiao, S., and Li, Q. (2020).
+\newblock Deepsnake: Deep contour fitting with circular convolution.
+\newblock {\em arXiv preprint arXiv:2009.06614}.
+
+\bibitem[\protect\astroncite{Shi et~al.}{2016}]{Shi2016}
+Shi, B., Wang, X., Xiao, P., and Zhang, L. (2016).
+\newblock Automatic text detection in natural images with multi-channel
+  features.
+\newblock {\em arXiv preprint arXiv:1603.03329}.
+
+\bibitem[\protect\astroncite{Sun et~al.}{2018}]{Sun2018}
+Sun, Z., Xu, B., Huang, H., Luo, J., Xu, W., Wang, S., and Yang, Y. (2018).
+\newblock Deep text detection with end-to-end phoneme-level attention.
+\newblock {\em IEEE Transactions on Image Processing}, 27(8):4036--4048.
+
+\bibitem[\protect\astroncite{Wu et~al.}{2019}]{wu2019sota}
+Wu, Z., Chen, Y., Wang, C., Yuan, L., and Xiong, Y. (2019).
+\newblock Sota: A simple, efficient and weakly-supervised object detection
+  framework.
+\newblock {\em arXiv preprint arXiv:1901.04510}.
+
+\end{thebibliography}

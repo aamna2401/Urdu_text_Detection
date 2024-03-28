@@ -1,0 +1,57 @@
+
+In the dynamic realm of computer vision, where the pursuit of effective text detection in natural scenes encounters persistent challenges, we confront a myriad of obstacles. Despite remarkable strides in controlled environments (e.g., \cite{Jaderberg2014, Gupta2023}) through deep learning, the transition to natural scenes introduces formidable barriers—multi-oriented text, intricate backgrounds, sensor noise, and variable resolutions (\cite{Gomez2009, Sun2018, Khan2022}). These challenges become particularly acute for scripts like Urdu, renowned for their cursive morphology, ligature-based structure, and distinct styles (Naskh and Nastaleeq) (\cite{Khan2019}). This can be seen in the picture Fig.\ref{fig:UrduStyles}. The complexities of complex layouts and non-planar surfaces further impede accurate text detection (\cite{Shi2016}). Urgent attention is required to bridge the gap between research and practical applications.
+
+Our research goes beyond general assertions by introducing precise metrics tailored to quantify Urdu script intricacies. These challenges manifest visually, underscoring the urgency to narrow the gap between theoretical research and practical applications within natural scenes.
+
+Our motivation arises from the tangible impact and real-world utility of accurate text extraction across diverse scenarios. In an era where technology seamlessly integrates into our daily lives, robust text detection holds immense potential across various domains:
+
+\begin{itemize}
+	\item \textbf{Autonomous Devices:} Ensuring safety and navigation through accurate interpretation of road signs and traffic signals.
+	\item \textbf{Translation for Foreign Tourists:} Fostering cross-cultural communication and enriching travel experiences through seamless text translation.
+	\item \textbf{Script Identification:} Preserving world languages and cultural diversity by recognizing and understanding diverse scripts.
+	\item \textbf{Geo-Localization:} Enabling precise mapping, urban planning, and location-specific services through efficient text extraction.
+	\item \textbf{Product Label Recognition:} Empowering consumers with seamless shopping experiences through accurate comprehension of product labels.
+	\item \textbf{Understanding ATM Machine Instructions:} Ensuring universal accessibility to ATM services, irrespective of language barriers.
+	\item \textbf{Historical Document Preservation:} Digitizing and preserving historical Urdu manuscripts to enrich cultural heritage.
+\end{itemize}
+
+This array of real-world applications underscores the critical role of text detection in simplifying tasks, enhancing accessibility, and elevating various domains. Our motivation is deeply rooted in a commitment to making this technology not only accurate and efficient but also broadly accessible and practical in diverse scenarios.
+
+Focusing on Urdu, a major South Asian language with over 170 million speakers, presents a compelling case for our research. Urdu, serving as Pakistan's national language and widely spoken in India, ranks among the most prevalent languages globally. The urgency for effective Urdu text detection becomes evident given this widespread usage. Urdu speakers face daily challenges due to inaccurate technology, ranging from misinterpretations on product labels to difficulties understanding ATM instructions.
+
+Moreover, Urdu script bears immense historical and cultural significance, deeply woven into the fabric of South Asian heritage. Its elegant curves and intricate ligatures tell stories of a rich literary tradition, connecting generations through poetry, prose, and historical documents. As we strive to address these challenges, our focus on Urdu text detection epitomizes our broader mission: extending the benefits of text detection to languages and regions where it can make a significant and positive impact.
+
+Our academic journey unfolds with three distinct contributions:
+
+\begin{figure*}[!htp]
+	\centering  
+	\includegraphics[width=4cm]{figures/urduStyles.eps}
+	\caption[Urdu Styles]{Urdu Styles}
+	\label{fig:UrduStyles}
+\end{figure*} 
+
+Our research makes significant contributions to advancing text detection, with a specific focus on the complexities introduced by the Urdu script. Building upon deep learning advancements (\cite{Shi2016, Wang2019}), we present three key contributions:
+
+\begin{enumerate}
+	\item \textbf{Meticulous Polygon Annotations:} We meticulously curate a high-quality dataset with fine-grained, shape-aware polygon annotations, providing a finer representation than conventional rectangular bounding boxes. This enhances the precision of our model, particularly for complex text shapes and ligatures prevalent in Urdu script.
+	
+	\item \textbf{Groundbreaking Dual-Model Architecture:} At our core is the introduction of a pioneering dual-model architecture, seamlessly integrating the Boundary Proposal Model and the Adaptive Deformation Model. Leveraging an encoder-decoder structure with Graph Convolutional Networks (GCNs) and Bidirectional Long Short-Term Memory networks (Bi-LSTMs), our model achieves a substantial increase in Urdu text detection accuracy, validated through objective performance metrics. One specific example of its efficacy is the improved accuracy in identifying complex Urdu script features, such as ligatures. Overview of the model can be seen in Fig.\ref{fig:architecture}
+	
+	\begin{center}
+		\begin{figure*}[htp]
+			\centering  
+			\includegraphics[width=7cm]{figures/BoundaryProposalDeformationHQ.eps}
+			\caption[Architecture Overview]{Architecture Overview}
+			\label{fig:architecture}
+		\end{figure*}
+	\end{center}
+	
+	\item \textbf{Potential Applications Across Scripts:} While Urdu is our primary focus, the adaptability of our model extends beyond script-specific challenges. The versatility of our proposed architecture and learning framework paves the way for potential applications across scripts with varying complexities, not only emphasizing the significance of our approach but also opening avenues for broader advancements in text detection accuracy.
+\end{enumerate}
+
+In conclusion, our research addresses Urdu script challenges, navigating the intersection of theoretical exploration and practical applications. Our work unlocks broader potential in computer vision and deep learning applications. As we detail our contributions in the following sections, the implications extend beyond script-specific challenges.
+
+While promising for Urdu text detection, our dual-model architecture invites further exploration, such as challenges in adaptability to historical scripts and manuscripts and performance in complex scenarios with multiple languages and diverse scripts.
+
+Join us in exploring the transformative potential within these pages, recognizing our achievements while anticipating the evolving landscape of text detection challenges. Our commitment to pushing understanding's boundaries remains steadfast, propelling us towards a future of seamless integration.
+
