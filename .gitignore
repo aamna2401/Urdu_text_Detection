@@ -1,0 +1,52 @@
+# Local project data
+weights/
+checkpoints/
+datasets/
+logs/
+*.zip
+
+# Archives and data
+*.rar
+*.7z
+*.gz
+*.npy
+*.npz
+*.pkl
+*.mat
+*.db
+*.sqlite
+
+# Media and documents
+*.mp4
+*.avi
+*.mov
+*.tif
+*.psd
+*.docx
+*.pptx
+*.eps
+
+# Secrets
+.env
+.env.*
+*.pem
+*.key
+
+# Experiment and build output
+wandb/
+mlruns/
+lightning_logs/
+build/
+dist/
+*.egg-info/
+
+# Project PDFs
+Thesis.pdf
+thesis.pdf
+
+# Keep intentionally tracked files
+!docs/Poster.pdf
+!textbpn/dataset/icdar15/gt.zip
+
+# Local-only clean export folder (removed from repo)
+github_repo/
